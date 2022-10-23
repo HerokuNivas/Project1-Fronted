@@ -1,0 +1,20 @@
+.mainComponent{
+    margin-left: 30px;
+    margin-top: 1.8rem;
+}
+
+.helpIcon{
+    display: inline;
+}
+
+h3.detailHeading{
+    color: #16cdfa;
+}
+
+.mainComponentAPIKey{
+    margin-top: 1.8rem;
+}
+
+#apiKey{
+    display: inline;
+}

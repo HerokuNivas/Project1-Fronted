@@ -1,0 +1,76 @@
+body{
+    background-color: #e6e6ff;
+}
+
+.flip {
+    display: flex;
+    justify-content: center;
+    
+}
+  
+.main {
+    display: inline-flex;
+    
+}
+  
+.box {
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    font-size: 5em;
+    color: #000;
+    font-weight: 900;
+    text-align: center;
+}
+  
+#box1::after {
+    content: "Inverted Index Generator";
+    display: flex;
+    transform: rotateX(180deg);
+    -webkit-background-clip: text;
+    color: #ddd;
+}
+
+#flip_heading{
+    margin-top: 5%;
+    margin-left: 42%;
+    font-size: 3rem;
+    justify-content: center;
+    color: #16cdfa;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width:  480px) {
+    #flip_heading{
+        margin-left: 18%;
+    }
+    #loading_line{
+        margin-left: 18% !important;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    #flip_heading{
+        margin-left: 20%;
+    }
+    #loading_line{
+        margin-left: 20% !important;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    #flip_heading{
+        margin-left: 37.5%;
+    }
+    #loading_line{
+        margin-left: 37.5% !important;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    #flip_heading{
+        margin-left: 41%;
+    }
+    #loading_line{
+        margin-left: 41% !important;
+    }
+}
