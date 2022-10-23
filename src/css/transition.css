@@ -12,6 +12,10 @@ body{
     display: inline-flex;
     
 }
+
+.transition{
+    text-align: center;
+}
   
 .box {
     margin-bottom: 2rem;
