@@ -6,16 +6,15 @@ import CloseIcon from "@mui/icons-material/Close";
 import useWindowDimensions from "../functions/windowWidth";
 
 function PopUp1(props) {
-  console.log("came in");
   const { height, width } = useWindowDimensions();
   const [ml, setml] = useState("25%");
-  const [mt, setmt] = useState("13%");
+  const [mt, setmt] = useState("10rem");
   const [mr, setmr] = useState("1%");
   const closeModel = () => {
     props.close(false);
   };
 
-  const callNow = () => {
+  function callNow(){
     if (width <= 1376) {
       setml("4%");
       setmt("12.5rem");
@@ -29,19 +28,6 @@ function PopUp1(props) {
     }
   }
 
-  window.open = function(){
-    if (width <= 1376) {
-      setml("4%");
-      setmt("12.5rem");
-      setmr("1%");
-    }
-
-    else{
-      setml("25%");
-      setmt("13%");
-      setmr("1%");
-    }
-  }
 
   window.onresize = function () {
     if (width <= 1376) {
