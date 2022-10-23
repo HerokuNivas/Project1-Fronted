@@ -107,7 +107,7 @@ function Contact() {
           maxRows={10}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          style={{ width: "350px" }}
+          style={{ width: "300px" }}
         />
       </div>
 
