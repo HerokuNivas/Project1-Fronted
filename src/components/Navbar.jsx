@@ -9,7 +9,7 @@ function Navbar(props) {
   <span class="navbar-brand" href="#"><h3 style={{marginLeft: 12}}>Inverted Index Generator</h3></span>
   <div className="buttonSet">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <ExpandMoreIcon className="expandNavbar" fontSize="medium"/>
+    <ExpandMoreIcon style={{color: "black"}} className="expandNavbar" fontSize="medium"/>
   </button>
   </div>
   
