@@ -15,6 +15,20 @@ function PopUp1(props) {
     props.close(false);
   };
 
+  const callNow = () => {
+    if (width <= 1376) {
+      setml("4%");
+      setmt("12.5rem");
+      setmr("1%");
+    }
+
+    else{
+      setml("25%");
+      setmt("13%");
+      setmr("1%");
+    }
+  }
+
   window.open = function(){
     if (width <= 1376) {
       setml("4%");
@@ -42,6 +56,8 @@ function PopUp1(props) {
       setmr("1%");
     }
   };
+
+  callNow();
 
   return (
     <div>
