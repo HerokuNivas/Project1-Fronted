@@ -61,11 +61,13 @@ function PopUp1(props) {
       >
         <div className="popup1">
           <a className="close" onClick={closeModel}>
-            <CloseIcon style={{ color: "red" }} />
+            <CloseIcon style={{ color: "#ff0000" }} />
           </a>
           <div className="popup1text">
             <span className="popup1text1">To know more about GIT Api key </span>
             <a className="popuptext1anchor1" href="https://docs.github.com/en/rest">Click Here</a>
+            <span className="popup1question1">Why do we need an API ?</span>
+            We need an API so that after generating inverted index we can again add the generated inverted index file to the git respository.
           </div>
         </div>
       </Popup>
