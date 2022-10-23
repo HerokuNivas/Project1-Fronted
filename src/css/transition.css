@@ -7,6 +7,11 @@ body{
     justify-content: center;
     
 }
+
+#transitionHeading{
+    color: #16cdfa;
+    margin-top: 2rem;
+}
   
 .main {
     display: inline-flex;

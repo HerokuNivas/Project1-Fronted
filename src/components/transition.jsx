@@ -4,7 +4,7 @@ import "../css/transition.css";
 function Transition() {
   return (
     <div className="transition">
-      <h1>Welcome to</h1>
+      <h1 id="transitionHeading">Welcome to</h1>
       <div class="flip">
         <div class="main">
           <div class="box" id="box1">
