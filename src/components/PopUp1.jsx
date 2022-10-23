@@ -57,7 +57,6 @@ function PopUp1(props) {
     }
   };
 
-  callNow();
 
   return (
     <div>
