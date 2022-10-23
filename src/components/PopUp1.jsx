@@ -1,37 +1,71 @@
 import Popup from "reactjs-popup";
 import React from "react";
-import '../css/PopUp1.css';
+import "../css/PopUp1.css";
 import { useState } from "react";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 import useWindowDimensions from "../functions/windowWidth";
 
-
 function PopUp1(props) {
-    console.log("came in");
-    const {height, width} = useWindowDimensions();
-    const [ml, setml] = useState("25%");
-    const [mt, setmt] = useState("13%");
-    const [mr, setmr] = useState("1%");
-    const closeModel = () => {props.close(false)};
+  console.log("came in");
+  const { height, width } = useWindowDimensions();
+  const [ml, setml] = useState("25%");
+  const [mt, setmt] = useState("13%");
+  const [mr, setmr] = useState("1%");
+  const closeModel = () => {
+    props.close(false);
+  };
 
-    window.onresize = function(){
-      if(width <= 1376){
-        setml("1%");
-        setmt("12.5rem");
-        setmr("1%");
-      }
+  window.open = function(){
+    if (width <= 1376) {
+      setml("4%");
+      setmt("12.5rem");
+      setmr("1%");
     }
 
+    else{
+      setml("25%");
+      setmt("13%");
+      setmr("1%");
+    }
+  }
+
+  window.onresize = function () {
+    if (width <= 1376) {
+      setml("4%");
+      setmt("12.5rem");
+      setmr("1%");
+    }
+
+    else{
+      setml("4%");
+      setmt("13%");
+      setmr("1%");
+    }
+  };
+
   return (
-    
     <div>
-      <Popup contentStyle={{position: "absolute", marginLeft: ml, background:"#16cdfa" ,marginTop: mt, marginRight: mr, textAlign: "center"}} closeOnDocumentClick={false} open={true}>
+      <Popup
+        contentStyle={{
+          position: "absolute",
+          marginLeft: ml,
+          background: "#16cdfa",
+          marginTop: mt,
+          marginRight: mr,
+          textAlign: "left",
+          width: "300px",
+        }}
+        closeOnDocumentClick={false}
+        open={true}
+      >
         <div className="popup1">
-        <a className="close" onClick={closeModel}>
-            <CloseIcon style={{color: "red"}}/>
+          <a className="close" onClick={closeModel}>
+            <CloseIcon style={{ color: "red" }} />
           </a>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          dolor nulla animi, natus velit assumenda deserunt molestias
+          <div className="popup1text">
+            <span className="popup1text1">To know more about GIT Api key </span>
+            <a className="popuptext1anchor1" href="https://docs.github.com/en/rest">Click Here</a>
+          </div>
         </div>
       </Popup>
     </div>
