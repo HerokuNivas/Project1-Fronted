@@ -18,6 +18,7 @@ function MainComponent() {
         <h6>API key of GITHUB🗝️</h6>
         <TextField
           required
+          className="apiGit"
           id="outlined-required"
           label="Required"
           style={{ width: 300, marginTop: 10 }}
