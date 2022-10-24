@@ -11,6 +11,9 @@ function HomeRoute(){
         <div>
             <Navbar/>
             <MainComponent/>
+            <div style={{marginTop: "5rem", marginBottom: "5rem"}}>
+                <ComponentBorder/>
+            </div>
             <div id = "contact"><Contact/></div>
             <Footer/>
         </div>

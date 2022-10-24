@@ -71,7 +71,7 @@ function MainComponent() {
       </div>
 
       <div className="mainComponentSubmitButton">
-        <Button style={{backgroundColor: "#16cdfa", marginLeft: "1%", marginTop: "1.8rem"}} type="submit" endIcon=<ArrowUpwardIcon style={{color: "white"}}/> ><span className="mainComponentSubmitText">Submit</span></Button>
+        <Button style={{backgroundColor: "#16cdfa", marginTop: "1.8rem"}} type="submit" endIcon=<ArrowUpwardIcon style={{color: "white"}}/> ><span className="mainComponentSubmitText">Submit</span></Button>
       </div>
 
 
