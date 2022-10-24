@@ -23,7 +23,7 @@ function MainComponent() {
   const [fileError, setfileError] = useState(false);
   const [success, setSuccess] = useState("");
 
-  function submitFun() {
+  async function submitFun() {
     if (
       apiKey === "" ||
       userName === "" ||
@@ -42,7 +42,11 @@ function MainComponent() {
 
     else{
       const apiCall = "https://inverted-index-generator.herokuapp.com/?apikey"+apiKey+"&userName"+userName+"&repoName"+repoName+"&fileName"+fileName;
-      axios.get(apiCall).then((response)=>console.log(response));
+      const response = await fetch(apiCall, {
+        method: 'POST',
+        headers: {'Content-Type': 'applications/json'}
+      })
+      console.log(await response.json());
     }
   }
 
