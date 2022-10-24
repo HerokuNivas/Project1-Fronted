@@ -56,7 +56,8 @@ function PopUp1(props) {
           textAlign: "left",
           width: "300px",
         }}
-        closeOnDocumentClick={false}
+        closeOnDocumentClick={true}
+        onClose={closeModel}
         open={true}
       >
         <div className="popup1">
@@ -67,7 +68,7 @@ function PopUp1(props) {
             <span className="popup1text1">To know more about GIT Api key </span>
             <a className="popuptext1anchor1" href="https://docs.github.com/en/rest">Click Here</a>
             <span className="popup1question1">Why do we need an API ?</span>
-            We need an API so that after generating inverted index we can again add the generated inverted index file to the git respository.
+            With the help of this API we can add the generated inverted index file to your git repository.
           </div>
         </div>
       </Popup>

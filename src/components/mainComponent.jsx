@@ -4,6 +4,8 @@ import "../css/mainComponent.css";
 import TextField from "@mui/material/TextField";
 import HelpIcon from "@mui/icons-material/Help";
 import PopUp1 from "./PopUp1";
+import StorageIcon from '@mui/icons-material/Storage';
+import CreateIcon from '@mui/icons-material/Create';
 
 function MainComponent() {
     const [popup1, setpopup1] = useState(false);
@@ -14,7 +16,7 @@ function MainComponent() {
       <h3 className="detailHeading">
         Fill the details to generate inverted index
       </h3>
-      <div className="mainComponentAPIKey">
+      <div className="mainComponentAPIKey col-lg-6 col-md-12 col-sm-12">
         <h6>API key of GITHUB🗝️</h6>
         <TextField
           required
@@ -32,6 +34,40 @@ function MainComponent() {
         </div>
         {popup1 && <PopUp1 close={setpopup1}/>}
       </div>
+      <div className="mainComponentUserName col-lg-6 col-md-12 col-sm-12">
+        <h6>Username of GITHUB👤</h6>
+        <TextField
+          required
+          className="apiUserName"
+          id="outlined-required"
+          label="Required"
+          style={{ width: 300, marginTop: 10 }}
+        />
+      </div>
+
+      <div className="mainComponentRepoName col-lg-6 col-md-12 col-sm-12" style={{marginTop: "2.5rem"}}>
+        <h6>GITHUB repository name <StorageIcon style={{color: "#809398"}}/></h6>
+        <TextField
+          required
+          className="gitRepoName"
+          id="outlined-required"
+          label="Required"
+          style={{ width: 300, marginTop: 10 }}
+        />
+      </div>
+
+      <div className="mainComponentFileName col-lg-6 col-md-12 col-sm-12">
+        <h6>File Name <CreateIcon style={{color: "blue"}}/></h6>
+        <TextField
+          required
+          className="gitRepoName"
+          id="outlined-required"
+          label="Required"
+          style={{ width: 300, marginTop: 10 }}
+          helperText="File name of generated inverted index"
+        />
+      </div>
+
     </div>
   );
 }

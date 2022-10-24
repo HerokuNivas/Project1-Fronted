@@ -10,12 +10,27 @@
 
 h3.detailHeading{
     color: #16cdfa;
+    margin-bottom: 1rem;
 }
 
 .mainComponentAPIKey{
-    margin-top: 1.8rem;
+    display: inline-block;
 }
 
-#apiKey{
-    display: inline;
+.mainComponentUserName{
+    display: inline-block;
+}
+
+.mainComponentRepoName{
+    display: inline-block;
+}
+
+.mainComponentFileName{
+    display: inline-block;
+}
+
+@media screen and (max-width: 992px){
+    .mainComponentUserName{
+        margin-top: 2rem;
+    }
 }
