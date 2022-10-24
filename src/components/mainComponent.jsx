@@ -8,7 +8,8 @@ import StorageIcon from "@mui/icons-material/Storage";
 import CreateIcon from "@mui/icons-material/Create";
 import { Button } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import ErrorAlert from "../Errorandsuccess/error.tsx"
+import ErrorAlert from "../Errorandsuccess/error.tsx";
+import axios from "axios";
 
 function MainComponent() {
   const [popup1, setpopup1] = useState(false);
@@ -20,6 +21,7 @@ function MainComponent() {
   const [userError, setuserError] = useState(false);
   const [repoError, setrepoError] = useState(false);
   const [fileError, setfileError] = useState(false);
+  const [success, setSuccess] = useState("");
 
   function submitFun() {
     if (
@@ -36,6 +38,11 @@ function MainComponent() {
         setrepoError(true);
       if(fileName === "")
         setfileError(true);
+    }
+
+    else{
+      const apiCall = "https://inverted-index-generator.herokuapp.com/?apikey"+apiKey+"&userName"+userName+"&repoName"+repoName+"&fileName"+fileName;
+      axios.get(apiCall).then((response)=>console.log(response));
     }
   }
 

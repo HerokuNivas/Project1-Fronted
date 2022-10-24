@@ -33,6 +33,8 @@ function Contact() {
   const [description, setDescription] = useState("");
   const [displayError, setdisplayError] = useState(false);
 
+  
+
   function addanchorProp() {
     if (issue === "Others") {
       document.getElementById("submitMail").href = document
