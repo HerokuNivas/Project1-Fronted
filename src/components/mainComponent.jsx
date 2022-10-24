@@ -30,23 +30,26 @@ function MainComponent() {
       repoName === "" ||
       fileName === ""
     ) {
-      if(apiKey === "")
-        setapiError(true);
-      if(userName === "")
-        setuserError(true);
-      if(repoName === "")
-        setrepoError(true);
-      if(fileName === "")
-        setfileError(true);
-    }
-
-    else{
-      const apiCall = "https://inverted-index-generator.herokuapp.com/?apikey"+apiKey+"&userName"+userName+"&repoName"+repoName+"&fileName"+fileName;
-      const response = await fetch(apiCall, {
-        method: 'POST',
-        headers: {'Content-Type': 'applications/json'}
-      })
-      console.log(await response.json());
+      if (apiKey === "") setapiError(true);
+      if (userName === "") setuserError(true);
+      if (repoName === "") setrepoError(true);
+      if (fileName === "") setfileError(true);
+    } else {
+      const apiCall =
+        "http://inverted-index-generator.herokuapp.com/?apikey=" +
+        apiKey +
+        "&userName=" +
+        userName +
+        "&repoName=" +
+        repoName +
+        "&fileName=" +
+        fileName;
+        await axios({
+          method: "GET",
+          url: apiCall,
+          timeout: 4000,
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' , 'Access-Control-Allow-Origin': "false"}
+        }).then(data => {console.log(data)}).catch((err) => {console.log(err)});
     }
   }
 
@@ -64,8 +67,8 @@ function MainComponent() {
           label="Required"
           style={{ width: 300, marginTop: 10 }}
           onChange={(e) => {
-          setapiError(false);
-          setapiKey(e.target.value)
+            setapiError(false);
+            setapiKey(e.target.value);
           }}
         />
         <div className="helpIcon">
@@ -76,7 +79,7 @@ function MainComponent() {
           />
         </div>
         {popup1 && <PopUp1 close={setpopup1} />}
-        {apiError && <ErrorAlert/>}
+        {apiError && <ErrorAlert />}
       </div>
       <div className="mainComponentUserName col-lg-6 col-md-12 col-sm-12">
         <h6>Username of GITHUB👤</h6>
@@ -87,10 +90,11 @@ function MainComponent() {
           label="Required"
           style={{ width: 300, marginTop: 10 }}
           onChange={(e) => {
-          setuserError(false);
-          setUserName(e.target.value)}}
+            setuserError(false);
+            setUserName(e.target.value);
+          }}
         />
-        {userError && <ErrorAlert/>}
+        {userError && <ErrorAlert />}
       </div>
 
       <div
@@ -107,10 +111,11 @@ function MainComponent() {
           label="Required"
           style={{ width: 300, marginTop: 10 }}
           onChange={(e) => {
-          setrepoError(false)
-          setrepoName(e.target.value)}}
+            setrepoError(false);
+            setrepoName(e.target.value);
+          }}
         />
-        {repoError && <ErrorAlert/>}
+        {repoError && <ErrorAlert />}
       </div>
 
       <div className="mainComponentFileName col-lg-6 col-md-12 col-sm-12">
@@ -124,17 +129,23 @@ function MainComponent() {
           label="Required"
           style={{ width: 300, marginTop: 10 }}
           onChange={(e) => {
-          setfileError(false);
-          setfileName(e.target.value)}
+            setfileError(false);
+            setfileName(e.target.value);
+          }}
+          helperText={
+            fileError ? "" : "File name to set for generated inverted index"
           }
-          helperText={fileError?"":"File name to set for generated inverted index"}
         />
-        {fileError && <ErrorAlert/>}
+        {fileError && <ErrorAlert />}
       </div>
 
       <div className="mainComponentSubmitButton">
         <Button
-          style={{ backgroundColor: "#16cdfa", marginTop: "1.8rem", marginLeft: "1%" }}
+          style={{
+            backgroundColor: "#16cdfa",
+            marginTop: "1.8rem",
+            marginLeft: "1%",
+          }}
           type="submit"
           endIcon=<ArrowUpwardIcon style={{ color: "white" }} />
           onClick={submitFun}
