@@ -4,6 +4,7 @@ import "../css/contact.css";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import Sendbutton from "./Sendbutton";
+import ErrorAlert from "../Errorandsuccess/error.tsx";
 
 const issues = [
   {
@@ -30,6 +31,7 @@ function Contact() {
   const [otherTitle, setOtherTitle] = useState("");
   const [errorIs, setError] = useState(false);
   const [description, setDescription] = useState("");
+  const [displayError, setdisplayError] = useState(false);
 
   function addanchorProp() {
     if (issue === "Others") {
@@ -81,20 +83,16 @@ function Contact() {
             required
             id="outlined-required"
             label="Required"
-            InputLabelProps={
-              {
-                style: {color: errorIs===false?"black":"red"},
-              }
-            }
             onChange={function(e) {
               setOtherTitle(e.target.value);
+              setdisplayError(false);
               if(e.target.value !== "") setError(false);
               else setError(true);
             }}
-            
             placeholder="What is the issue?"
             helperText="Specify the issue which you are facing"
           />
+          {displayError && <ErrorAlert style={{widht: "100%"}}/>}
         </div>
       )}
 
@@ -115,9 +113,16 @@ function Contact() {
         onMouseEnter={addanchorProp}
         onMouseLeave={removeanchorProp}
         id="submitMail"
+        onClick={()=>{
+          if(errorIs === true){
+            document.getElementById("submitMail").href = "#contact"
+            setdisplayError(true);
+          }
+            
+        }}
         href="mailto:invertedindexgenerator@gmail.com?subject=subjectIs&body=bodyIs"
       >
-        {errorIs === false && <Sendbutton />}
+        <Sendbutton/>
       </a>
     </div>
   );
