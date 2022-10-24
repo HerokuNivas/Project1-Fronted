@@ -10,6 +10,8 @@ import { Button } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ErrorAlert from "../Errorandsuccess/error.tsx";
 import axios from "axios";
+import LoadingButton from '@mui/lab/LoadingButton';
+
 
 function MainComponent() {
   const [popup1, setpopup1] = useState(false);
@@ -21,7 +23,7 @@ function MainComponent() {
   const [userError, setuserError] = useState(false);
   const [repoError, setrepoError] = useState(false);
   const [fileError, setfileError] = useState(false);
-  const [success, setSuccess] = useState("");
+  const [success, setSuccess] = useState(false);
 
   async function submitFun() {
     if (
@@ -35,8 +37,9 @@ function MainComponent() {
       if (repoName === "") setrepoError(true);
       if (fileName === "") setfileError(true);
     } else {
+      setSuccess(true);
       const apiCall =
-        "http://inverted-index-generator.herokuapp.com/?apikey=" +
+        "https://inverted-index-generator.herokuapp.com/?apikey=" +
         apiKey +
         "&userName=" +
         userName +
@@ -48,8 +51,9 @@ function MainComponent() {
           method: "GET",
           url: apiCall,
           timeout: 4000,
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' , 'Access-Control-Allow-Origin': "false"}
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded'}
         }).then(data => {console.log(data)}).catch((err) => {console.log(err)});
+        setSuccess(false);
     }
   }
 
@@ -120,7 +124,7 @@ function MainComponent() {
 
       <div className="mainComponentFileName col-lg-6 col-md-12 col-sm-12">
         <h6>
-          File Name <CreateIcon style={{ color: "blue" }} />
+          File Name <CreateIcon style={{ color: "#16cdfa" }} />
         </h6>
         <TextField
           required
@@ -153,6 +157,7 @@ function MainComponent() {
           <span className="mainComponentSubmitText">Submit</span>
         </Button>
       </div>
+      {success && <LoadingButton/>}
     </div>
   );
 }
