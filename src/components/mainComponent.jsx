@@ -10,7 +10,7 @@ import { Button } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ErrorAlert from "../Errorandsuccess/error.tsx";
 import axios from "axios";
-import LoadingButton from '@mui/lab/LoadingButton';
+import ReactLoading from 'react-loading';
 
 
 function MainComponent() {
@@ -23,6 +23,8 @@ function MainComponent() {
   const [userError, setuserError] = useState(false);
   const [repoError, setrepoError] = useState(false);
   const [fileError, setfileError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState("");
   const [success, setSuccess] = useState(false);
 
   async function submitFun() {
@@ -37,7 +39,7 @@ function MainComponent() {
       if (repoName === "") setrepoError(true);
       if (fileName === "") setfileError(true);
     } else {
-      setSuccess(true);
+      setLoading(true);
       const apiCall =
         "https://inverted-index-generator.herokuapp.com/?apikey=" +
         apiKey +
@@ -52,8 +54,14 @@ function MainComponent() {
           url: apiCall,
           timeout: 4000,
           headers: { 'Content-Type': 'application/x-www-form-urlencoded'}
-        }).then(data => {console.log(data)}).catch((err) => {console.log(err)});
-        setSuccess(false);
+        }).then(data => {setData(data)}).catch((err) => {console.log(err)});
+        if(data.data.successCode === true){
+          setSuccess(true);
+        }
+        else{
+          setSuccess(false);
+        }
+        setLoading(false);
     }
   }
 
@@ -153,11 +161,16 @@ function MainComponent() {
           type="submit"
           endIcon=<ArrowUpwardIcon style={{ color: "white" }} />
           onClick={submitFun}
+          disabled={loading?true:false}
         >
           <span className="mainComponentSubmitText">Submit</span>
         </Button>
       </div>
-      {success && <LoadingButton/>}
+      {loading &&
+      <div style={{textAlign: "center", justifyItems: "center", marginLeft: "48%", marginTop: "20px"}}>
+        <ReactLoading type="spin" color="#16cdfa" height={30} width={30}/>
+      </div>}
+      
     </div>
   );
 }
