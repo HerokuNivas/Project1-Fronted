@@ -6,6 +6,8 @@ import HelpIcon from "@mui/icons-material/Help";
 import PopUp1 from "./PopUp1";
 import StorageIcon from '@mui/icons-material/Storage';
 import CreateIcon from '@mui/icons-material/Create';
+import { Button } from "@mui/material";
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 function MainComponent() {
     const [popup1, setpopup1] = useState(false);
@@ -67,6 +69,11 @@ function MainComponent() {
           helperText="File name of generated inverted index"
         />
       </div>
+
+      <div className="mainComponentSubmitButton">
+        <Button style={{backgroundColor: "#16cdfa", marginLeft: "1%", marginTop: "1.8rem"}} type="submit" endIcon=<ArrowUpwardIcon style={{color: "white"}}/> ><span className="mainComponentSubmitText">Submit</span></Button>
+      </div>
+
 
     </div>
   );

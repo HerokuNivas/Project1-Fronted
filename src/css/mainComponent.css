@@ -33,4 +33,12 @@ h3.detailHeading{
     .mainComponentUserName{
         margin-top: 2rem;
     }
+
+    .mainComponentFileName{
+        margin-top: 2rem;
+    }
+}
+
+.mainComponentSubmitText{
+    color: white;
 }
