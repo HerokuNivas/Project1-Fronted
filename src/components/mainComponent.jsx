@@ -8,8 +8,7 @@ import StorageIcon from "@mui/icons-material/Storage";
 import CreateIcon from "@mui/icons-material/Create";
 import { Button } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import Alert from "@mui/material/Alert";
-import AlertTitle from "@mui/material/AlertTitle";
+import ErrorAlert from "../Errorandsuccess/error.tsx"
 
 function MainComponent() {
   const [popup1, setpopup1] = useState(false);
@@ -17,6 +16,10 @@ function MainComponent() {
   const [userName, setUserName] = useState("");
   const [repoName, setrepoName] = useState("");
   const [fileName, setfileName] = useState("");
+  const [apiError, setapiError] = useState(false);
+  const [userError, setuserError] = useState(false);
+  const [repoError, setrepoError] = useState(false);
+  const [fileError, setfileError] = useState(false);
 
   function submitFun() {
     if (
@@ -25,12 +28,14 @@ function MainComponent() {
       repoName === "" ||
       fileName === ""
     ) {
-      return (
-        <Alert severity="error">
-          <AlertTitle>Error</AlertTitle>
-          This is an error alert — <strong>check it out!</strong>
-        </Alert>
-      );
+      if(apiKey === "")
+        setapiError(true);
+      if(userName === "")
+        setuserError(true);
+      if(repoName === "")
+        setrepoError(true);
+      if(fileName === "")
+        setfileError(true);
     }
   }
 
@@ -47,7 +52,10 @@ function MainComponent() {
           id="outlined-required"
           label="Required"
           style={{ width: 300, marginTop: 10 }}
-          onChange={(e) => setapiKey(e.target.value)}
+          onChange={(e) => {
+          setapiError(false);
+          setapiKey(e.target.value)
+          }}
         />
         <div className="helpIcon">
           <HelpIcon
@@ -57,6 +65,7 @@ function MainComponent() {
           />
         </div>
         {popup1 && <PopUp1 close={setpopup1} />}
+        {apiError && <ErrorAlert/>}
       </div>
       <div className="mainComponentUserName col-lg-6 col-md-12 col-sm-12">
         <h6>Username of GITHUB👤</h6>
@@ -66,8 +75,11 @@ function MainComponent() {
           id="outlined-required"
           label="Required"
           style={{ width: 300, marginTop: 10 }}
-          onChange={(e) => setUserName(e.target.value)}
+          onChange={(e) => {
+          setuserError(false);
+          setUserName(e.target.value)}}
         />
+        {userError && <ErrorAlert/>}
       </div>
 
       <div
@@ -83,8 +95,11 @@ function MainComponent() {
           id="outlined-required"
           label="Required"
           style={{ width: 300, marginTop: 10 }}
-          onChange={(e) => setrepoName(e.target.value)}
+          onChange={(e) => {
+          setrepoError(false)
+          setrepoName(e.target.value)}}
         />
+        {repoError && <ErrorAlert/>}
       </div>
 
       <div className="mainComponentFileName col-lg-6 col-md-12 col-sm-12">
@@ -93,18 +108,22 @@ function MainComponent() {
         </h6>
         <TextField
           required
-          className="gitRepoName"
+          className="gitFileName"
           id="outlined-required"
           label="Required"
           style={{ width: 300, marginTop: 10 }}
-          onChange={(e) => setfileName(e.target.value)}
-          helperText="File name of generated inverted index"
+          onChange={(e) => {
+          setfileError(false);
+          setfileName(e.target.value)}
+          }
+          helperText={fileError?"":"File name to set for generated inverted index"}
         />
+        {fileError && <ErrorAlert/>}
       </div>
 
       <div className="mainComponentSubmitButton">
         <Button
-          style={{ backgroundColor: "#16cdfa", marginTop: "1.8rem" }}
+          style={{ backgroundColor: "#16cdfa", marginTop: "1.8rem", marginLeft: "1%" }}
           type="submit"
           endIcon=<ArrowUpwardIcon style={{ color: "white" }} />
           onClick={submitFun}
