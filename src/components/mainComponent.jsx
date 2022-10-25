@@ -63,8 +63,8 @@ function MainComponent() {
           const val = await value.data;
           setData(val.text);
           setSuccessCode(val.successCode);
-          const _ = await setData(val.text);
-          const __ = await setSuccessCode(val.successCode);
+          await setData(val.text);
+          await setSuccessCode(val.successCode);
         
         setLoading(false);
         setopenPopUp(true);
