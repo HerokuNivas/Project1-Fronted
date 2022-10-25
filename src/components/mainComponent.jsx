@@ -166,7 +166,7 @@ function MainComponent() {
             setfileName(e.target.value);
           }}
           helperText={
-            fileError ? "" : "File name to set for generated inverted index"
+            fileError ? "" : "File name which is to be set for inverted index"
           }
         />
         {fileError && <ErrorAlert />}
