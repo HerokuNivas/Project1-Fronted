@@ -26,7 +26,7 @@ function Documentation(){
                <Link to="/home"><ArrowBackIcon style={{color: "#16cdfa", marginTop: "10px", marginLeft: "18px"}}/></Link>
             </div>
             <div className="gettingStarted">
-                <h5 style={{color: "black"}}>To know what is Inverted Index of a file click <a style={{color: "black"}} href="https://www.geeksforgeeks.org/inverted-index/" rel="noopener noreffer" target="_blank"><span className="firstLink" style={{fontWeight: "bold"}}>here</span></a> </h5>
+                <h5 style={{color: "black"}}>To know what is Inverted Index click <a style={{color: "black"}} href="https://www.geeksforgeeks.org/inverted-index/" rel="noopener noreffer" target="_blank"><span className="firstLink" style={{fontWeight: "bold"}}>here</span></a> </h5>
             </div>
             <div id="apiDocumentation">
                 <ApiDocumentation/>
