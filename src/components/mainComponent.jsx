@@ -181,7 +181,7 @@ function MainComponent() {
       {loading &&
       <div style={{textAlign: "center", color:"#16cdfa", fontWeight: "bold"}}>
 
-      <div style={{textAlign: "center", justifyItems: "center", marginLeft: "48%", marginTop: "20px", marginBottom:"10px"}}>
+      <div style={{textAlign: "center", justifyItems: "center", marginLeft: "48%", marginTop: "20px", marginBottom:"10px", marginRight: "48%"}}>
         <ReactLoading type="spin" color="#16cdfa" height={30} width={30}/>
         
       </div>
