@@ -14,6 +14,7 @@ import ReactLoading from 'react-loading';
 import SuccessAlert from "../Errorandsuccess/success.tsx";
 import KeyIcon from '@mui/icons-material/Key';
 import PersonIcon from '@mui/icons-material/Person';
+import ErrorAlert1 from "../Errorandsuccess/error2";
 
 function MainComponent() {
   const [popup1, setpopup1] = useState(false);
@@ -190,7 +191,8 @@ function MainComponent() {
       </div>}
       
 
-      {openPopUp && <SuccessAlert link={apiCallIs} popup={setopenPopUp}/>}
+      {openPopUp && successCode && <SuccessAlert link={apiCallIs} popup={setopenPopUp}/>}
+      {openPopUp && !successCode && <ErrorAlert1 text={dataIs} popup={setopenPopUp}/>}
       
     </div>
   );
