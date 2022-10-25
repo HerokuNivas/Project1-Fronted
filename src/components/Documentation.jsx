@@ -4,6 +4,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import '../css/Documentation.css';
 import { Link } from "react-router-dom";
 import ApiDocumentation from "../documentations/apiDocumentation";
+import ComponentBorder from "./ComponentBorder";
+import RepoDocumentation from "../documentations/repoDocumentation";
 
 function Documentation(){
     return(
@@ -18,8 +20,11 @@ function Documentation(){
             <div id="apiDocumentation">
                 <ApiDocumentation/>
             </div>
+            <div style={{marginTop: "2.5rem"}}>
+                <ComponentBorder/>
+            </div>
             <div id="repoDocumentation">
-                This is for repo
+                <RepoDocumentation/>
             </div>
             <div id="outputDocumentation">
                 This is for output

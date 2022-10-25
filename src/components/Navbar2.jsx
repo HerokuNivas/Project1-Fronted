@@ -22,7 +22,7 @@ function Navbar2(props) {
         <a className="nav-link changeLink listItem" href="#apiDocumentation"><h6>API Key <KeyIcon fontSize="small" style={{color: "white"}}/></h6></a>
       </li>
       <li class="nav-item">
-        <a className="nav-link changeLink listItem" href="#repoDocumentation"><h6>Repo <StorageIcon fontSize="small" style={{color: "white"}}/></h6></a>
+        <a className="nav-link changeLink listItem" href="#repoDocumentation"><h6>Repository <StorageIcon fontSize="small" style={{color: "white"}}/></h6></a>
       </li>
       <li class="nav-item">
         <a className="nav-link changeLink listItem" href="#outputDocumentation"><h6>Types of output <OutputIcon fontSize="small" style={{color: "white"}}/></h6></a>
