@@ -10,7 +10,7 @@ export default function SuccessAlert(props) {
       <Stack sx={{ width: '100%' }} spacing={2} style={{marginTop: "1.8rem"}}>
         <Alert severity="success">
           <AlertTitle>Success<CloseIcon style={{position: "absolute", right: "20px"}} onClick={() => {props.popup(false)}}/></AlertTitle>
-          Inverted Index File generated successfully. Click— <a className='successAlert text-success' href={props.link}>here </a>
+          Inverted Index File generated successfully. Click— <a className='successAlert text-success' href={props.link} rel="noopener noreffer" target="_blank">here </a>
            to open it.
         </Alert>
       </Stack>

@@ -66,7 +66,7 @@ function PopUp1(props) {
           </a>
           <div className="popup1text">
             <span className="popup1text1">To know more about GIT Api key </span>
-            <a className="popuptext1anchor1" href="https://docs.github.com/en/rest">Click Here</a>
+            <a className="popuptext1anchor1" href="https://docs.github.com/en/rest" rel="noopener noreffer" target="_blank">Click Here</a>
             <span className="popup1question1">Why do we need an API ?</span>
             With the help of this API we can add the generated inverted index file to your git repository.
           </div>

@@ -8,7 +8,7 @@ function RepoDocumentation(){
         <div className='repodoc'>
             <h3 style={{color: "#16cdfa", marginTop: "2.5rem", marginBottom: "1.8rem"}}>Repository Documentation</h3>
             <p>1. Create an Empty Respository in GITHUB.</p>
-            <p style={{marginLeft: "25px"}}>Click <a className="repoLink" style={{color:"#16cdfa"}} href="https://github.com/new">here </a>to create repository.</p>
+            <p style={{marginLeft: "25px"}}>Click <a className="repoLink" style={{color:"#16cdfa"}} href="https://github.com/new" rel="noopener noreffer" target="_blank">here </a>to create repository.</p>
             <p>2. After the Repository creation, add all the text files to the Repository for which Inverted Index is to be generated.</p>
             <p style={{marginLeft:"25px"}}>Files can be added in two ways.</p>
             <h6 style={{marginLeft:"25px", color:"#16cdfa"}}>METHOD-1</h6>
@@ -18,7 +18,7 @@ function RepoDocumentation(){
             <ol>
                 <li>
                     Make sure that you installed <span style={{fontWeight: "bolder"}}>git</span>.
-                    <p>Click <a className="repoLink" style={{color:"#16cdfa"}} href="https://git-scm.com/downloads">here </a>to install git.</p>
+                    <p>Click <a className="repoLink" style={{color:"#16cdfa"}} href="https://git-scm.com/downloads" rel="noopener noreffer" target="_blank">here </a>to install git.</p>
                 </li>
                 <li>
                     Follow the below steps.
