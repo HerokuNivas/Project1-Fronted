@@ -85,7 +85,7 @@ function MainComponent() {
   return (
     <div className="mainComponent">
       <h3 className="detailHeading">
-        Fill the details to generate inverted index
+        Fill the details to generate inverted index file
       </h3>
       <div className="mainComponentAPIKey col-lg-6 col-md-12 col-sm-12">
         <h6>API key of GITHUB <KeyIcon style={{color: "#16cdfa"}}/></h6>
