@@ -21,7 +21,7 @@ function RepoDocumentation(){
                     <p>Click <a className="repoLink" style={{color:"#16cdfa"}} href="https://git-scm.com/downloads">here </a>to install git.</p>
                 </li>
                 <li>
-                    Mention the below steps.
+                    Follow the below steps.
                 </li>
             </ol>
             <div style={{marginLeft: "20px"}}><img src={Image2} width={"80%"} height={"80%"}/></div>
