@@ -5,6 +5,8 @@ import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import Sendbutton from "./Sendbutton";
 import ErrorAlert from "../Errorandsuccess/error.tsx";
+import AbcIcon from '@mui/icons-material/Abc';
+import InputAdornment from '@mui/material/InputAdornment';
 
 const issues = [
   {
@@ -101,13 +103,20 @@ function Contact() {
       <div id="issueDescribe">
         <TextField
           placeholder="Start typing here  .."
-          label="Describe your issue here 🆎"
+          label="Describe your issue here"
+          InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <AbcIcon fontSize="large" style={{color: "#16cdfa"}}/>
+            </InputAdornment>
+          ),
+        }}
           multiline
           minRows={2}
           maxRows={10}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          style={{ width: "300px" }}
+          style={{ width: "320px" }}
         />
       </div>
 
