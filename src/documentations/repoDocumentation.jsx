@@ -10,7 +10,7 @@ function RepoDocumentation(){
             <p>1. Create an Empty Respository in GITHUB.</p>
             <p style={{marginLeft: "25px"}}>Click <a className="repoLink" style={{color:"#16cdfa"}} href="https://github.com/new" rel="noopener noreffer" target="_blank">here </a>to create repository.</p>
             <p>2. After the Repository creation, add all the text files to the Repository for which Inverted Index is to be generated.</p>
-            <p style={{marginLeft:"25px"}}>Files can be added in two ways.</p>
+            <p style={{marginLeft:"25px"}}>Files can be added in two methods.</p>
             <h6 style={{marginLeft:"25px", color:"#16cdfa"}}>METHOD-1</h6>
             <p style={{marginLeft: "30px"}}>Select <span style={{fontWeight: "bold"}}>Upload an Existing File</span> and add all the files from your folder.</p>
             <div style={{marginLeft: "20px"}}><img src={Image1} width={"80%"} height={"80%"}/></div>
