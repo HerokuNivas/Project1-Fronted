@@ -1,0 +1,8 @@
+.successAlert{
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.successAlert:hover{
+    text-decoration: underline;
+}
