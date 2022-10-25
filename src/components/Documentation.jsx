@@ -1,8 +1,9 @@
 import React from "react";
+import Navbar2 from "./Navbar2";
 
 function Documentation(){
     return(
-        <h1>Hello, This is the documentation page.</h1>    
+        <Navbar2/>    
     )
 }
 

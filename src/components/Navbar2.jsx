@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import KeyIcon from '@mui/icons-material/Key';
+import StorageIcon from '@mui/icons-material/Storage';
+import OutputIcon from '@mui/icons-material/Output';
 
-function Navbar(props) {
+function Navbar2(props) {
   return (
     <nav class="navbar navbar-expand-lg navBar">
   <span class="navbar-brand" href="#"><h3 style={{marginLeft: 26}}>Inverted Index Generator</h3></span>
@@ -17,10 +19,13 @@ function Navbar(props) {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto listItems">
       <li class="nav-item active">
-        <Link className="nav-link changeLink listItem" to="/documentation"><h6>📄</h6></Link>
+        <a className="nav-link changeLink listItem" href="#apiDocumentation"><h6>API Key <KeyIcon fontSize="small" style={{color: "white"}}/></h6></a>
       </li>
       <li class="nav-item">
-        <a className="nav-link changeLink listItem" href="#contact"><h6>Contact Us✉️</h6></a>
+        <a className="nav-link changeLink listItem" href="#repoDocumentation"><h6>Repo <StorageIcon fontSize="small" style={{color: "white"}}/></h6></a>
+      </li>
+      <li class="nav-item">
+        <a className="nav-link changeLink listItem" href="#outputDocumentation"><h6>Types of output <OutputIcon fontSize="small" style={{color: "white"}}/></h6></a>
       </li>
     </ul>
   </div>
@@ -28,4 +33,4 @@ function Navbar(props) {
   );
 }
 
-export default Navbar;
+export default Navbar2;
