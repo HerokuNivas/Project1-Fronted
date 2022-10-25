@@ -1,0 +1,11 @@
+.gettingStarted{
+    margin-left: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: "#16cdfa"
+}
+
+.firstLink:hover{
+    text-decoration: underline;
+}
+

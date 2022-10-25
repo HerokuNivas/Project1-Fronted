@@ -11,6 +11,9 @@ function Documentation(){
             <div className="arrowBackIconDoc">
                <Link to="/home"><ArrowBackIcon style={{color: "#16cdfa", marginTop: "10px", marginLeft: "18px"}}/></Link>
             </div>
+            <div className="gettingStarted">
+                <h5 style={{color: "#16cdfa"}}>To know what is Inverted Index of a file click <a style={{color: "#16cdfa"}} href="https://www.geeksforgeeks.org/inverted-index/"><span className="firstLink" style={{fontWeight: "bold"}}>here</span></a> </h5>
+            </div>
             <div id="apiDocumentation">
                 This is for api
             </div>
