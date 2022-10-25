@@ -13,9 +13,9 @@ function ApiDocumentation(){
             <p>3. Click on Geneate New Token and then Generate new token (classic). </p>
             <p>4. Expiration can be set as per your wish but make sure that the API key is active while you are using it to generate Inverted Index File.  </p>
             <p style={{marginLeft: "25px"}}><span style={{color: "red", fontWeight:"bold"}}>Note</span> : While generating token make sure that the first scope repo is checked. Without this the generated index file cannot be written back to your repository.</p>
-            <div><img src={image1} width={"60%"} height={"60%"}/></div>
-            <div style={{marginTop: "1.8rem"}} ><img src={image2} width={"30%"} height={"30%"}/></div>
-            <div style={{marginTop: "1.8rem"}} ><img src={image3} width={"60%"} height={"60%"}/></div>
+            <div><img src={image1} width={"80%"} height={"80%"}/></div>
+            <div style={{marginTop: "1.8rem"}} ><img src={image2} width={"80%"} height={"80%"}/></div>
+            <div style={{marginTop: "1.8rem"}} ><img src={image3} width={"80%"} height={"80%"}/></div>
         </div>
     )
 }
