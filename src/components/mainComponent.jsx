@@ -14,7 +14,7 @@ import ReactLoading from 'react-loading';
 import SuccessAlert from "../Errorandsuccess/success.tsx";
 import KeyIcon from '@mui/icons-material/Key';
 import PersonIcon from '@mui/icons-material/Person';
-import ErrorAlert1 from "../Errorandsuccess/error2";
+import ErrorAlert1 from "../Errorandsuccess/error2.tsx";
 
 function MainComponent() {
   const [popup1, setpopup1] = useState(false);
