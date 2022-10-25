@@ -6,10 +6,21 @@ import { Link } from "react-router-dom";
 import ApiDocumentation from "../documentations/apiDocumentation";
 import ComponentBorder from "./ComponentBorder";
 import RepoDocumentation from "../documentations/repoDocumentation";
+import OutputDocumentation from "../documentations/outputDocumentation";
+import Footer from "./Footer";
+import BackToTop from "react-back-to-top-button";
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 function Documentation(){
     return(
         <div>
+        <BackToTop
+        showAt={0}
+        speed={0}
+        easing="easeInOutQuint"
+      >
+        <span><ArrowUpwardIcon style={{color: "black", fontWeight:"bolder"}}/></span>
+      </BackToTop>
             <Navbar2/>
             <div className="arrowBackIconDoc">
                <Link to="/home"><ArrowBackIcon style={{color: "#16cdfa", marginTop: "10px", marginLeft: "18px"}}/></Link>
@@ -26,9 +37,14 @@ function Documentation(){
             <div id="repoDocumentation">
                 <RepoDocumentation/>
             </div>
-            <div id="outputDocumentation">
-                This is for output
+            <div style={{marginTop: "2.5rem"}}>
+                <ComponentBorder/>
             </div>
+            <div id="outputDocumentation" style={{marginBottom: "1.8rem"}}>
+                <OutputDocumentation/>
+            </div>
+            
+            <Footer/>
         </div>
 
     )

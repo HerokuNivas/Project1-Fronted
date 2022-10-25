@@ -15,6 +15,12 @@ import SuccessAlert from "../Errorandsuccess/success.tsx";
 import KeyIcon from '@mui/icons-material/Key';
 import PersonIcon from '@mui/icons-material/Person';
 import ErrorAlert1 from "../Errorandsuccess/error2.tsx";
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import { Link } from "react-router-dom";
 
 function MainComponent() {
   const [popup1, setpopup1] = useState(false);
@@ -161,6 +167,19 @@ function MainComponent() {
           }
         />
         {fileError && <ErrorAlert />}
+      </div>
+
+      <div style={{marginLeft: "18px", marginTop: "1.8rem"}}>
+      <p>Select the output type <Link to='/documentation/outputDocumentation'><HelpIcon
+            
+            style={{ marginLeft: 8, color: "#16cdfa", display: "inline-block"}}
+      /></Link></p>
+      <FormControl component="fieldset">
+      <RadioGroup aria-label="output" name="output" defaultValue="Index">
+        <FormControlLabel value="Index" control={<Radio style={{color: "#16cdfa"}}/>} label="To use index of file" />
+        <FormControlLabel value="FileName" control={<Radio style={{color: "#16cdfa"}}/>} label="To use file name" />
+      </RadioGroup>
+    </FormControl>
       </div>
 
       <div className="mainComponentSubmitButton">
