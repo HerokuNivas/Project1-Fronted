@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ArticleIcon from '@mui/icons-material/Article';
-import EmailIcon from '@mui/icons-material/Email';
 
 function Navbar(props) {
   return (
@@ -19,10 +17,10 @@ function Navbar(props) {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto listItems">
       <li class="nav-item active">
-        <Link className="nav-link changeLink listItem" to="/documentation"><h6>Documentation <ArticleIcon fontSize="small" style={{color: "white"}}/></h6></Link>
+        <Link className="nav-link changeLink listItem" to="/documentation"><h6>📄</h6></Link>
       </li>
       <li class="nav-item">
-        <a className="nav-link changeLink listItem" href="#contact"><h6>Contact Us <EmailIcon fontSize="small" style={{color: "white"}}/></h6></a>
+        <a className="nav-link changeLink listItem" href="#contact"><h6>Contact Us✉️</h6></a>
       </li>
     </ul>
   </div>
