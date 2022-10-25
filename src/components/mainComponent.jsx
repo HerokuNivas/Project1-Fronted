@@ -37,6 +37,7 @@ function MainComponent() {
   const [successCode, setSuccessCode] = useState(false);
   const [openPopUp, setopenPopUp] = useState(false);
   const [apiCallIs, setapiCall] = useState("");
+  const [radioButton, setRadioButton] = useState("Index");
 
   async function submitFun() {
     if (
@@ -60,7 +61,9 @@ function MainComponent() {
         "&repoName=" +
         repoName +
         "&fileName=" +
-        fileName;
+        fileName+
+        "&type="+
+        radioButton;
         setapiCall('https://github.com/'+userName+'/'+repoName+'/blob/main/'+fileName+'.txt')
           const value = await axios({
             method: "GET",
@@ -175,7 +178,7 @@ function MainComponent() {
             style={{ marginLeft: 8, color: "#16cdfa", display: "inline-block"}}
       /></Link></p>
       <FormControl component="fieldset">
-      <RadioGroup aria-label="output" name="output" defaultValue="Index">
+      <RadioGroup aria-label="output" name="output" defaultValue="Index" value={radioButton} onChange={(e)=>{setRadioButton(e.target.value)}}>
         <FormControlLabel value="Index" control={<Radio style={{color: "#16cdfa"}}/>} label="To use index of file" />
         <FormControlLabel value="FileName" control={<Radio style={{color: "#16cdfa"}}/>} label="To use file name" />
       </RadioGroup>

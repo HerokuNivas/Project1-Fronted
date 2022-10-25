@@ -16,7 +16,7 @@ function Documentation(){
         <div>
         <BackToTop
         showAt={0}
-        speed={0}
+        speed={50}
         easing="easeInOutQuint"
       >
         <span><ArrowUpwardIcon style={{color: "black", fontWeight:"bolder"}}/></span>

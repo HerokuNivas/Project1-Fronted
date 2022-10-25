@@ -23,10 +23,10 @@ function OutputDocumentation(){
             <p>Considering the same Example which we seen above</p>
             <p>In this case output will be</p>
             <p>For word <span style={{fontWeight: "bolder"}}>"east"</span></p>
-            <p>Output file contains <span style={{color: "#16cdfa", fontWeight: "bold"}}>"east : DOC1"</span></p>
+            <p>Output file contains <span style={{color: "#16cdfa", fontWeight: "bold"}}>"east : 'DOC1'"</span></p>
             <p>Similarly, for word <span style={{fontWeight: "bolder"}}>"west"</span></p>
-            <p>Output file contains <span style={{color: "#16cdfa", fontWeight: "bold"}}>"west : DOC2"</span></p>
-            <p>Here <span style={{fontWeight: "bold"}}>DOC1 and DOC2</span> reflect the file names.</p>
+            <p>Output file contains <span style={{color: "#16cdfa", fontWeight: "bold"}}>"west : 'DOC2'"</span></p>
+            <p>Here <span style={{fontWeight: "bold"}}>'DOC1' and 'DOC2'</span> reflect the file names.</p>
         </div>
     )
 }
