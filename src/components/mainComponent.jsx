@@ -178,7 +178,7 @@ function MainComponent() {
             style={{ marginLeft: 8, color: "#16cdfa", display: "inline-block"}}
       /></Link></p>
       <FormControl component="fieldset">
-      <RadioGroup aria-label="output" name="output" defaultValue="Index" value={radioButton} onChange={(e)=>{setRadioButton(e.target.value)}}>
+      <RadioGroup aria-label="output" name="output" defaultValue="Index" value={radioButton} onChange={(e)=>{setRadioButton(e.target.value)}} row>
         <FormControlLabel value="Index" control={<Radio style={{color: "#16cdfa"}}/>} label="To use index of file" />
         <FormControlLabel value="FileName" control={<Radio style={{color: "#16cdfa"}}/>} label="To use file name" />
       </RadioGroup>
@@ -200,6 +200,7 @@ function MainComponent() {
           <span className="mainComponentSubmitText">Submit</span>
         </Button>
       </div>
+      {!loading && !openPopUp && <div style={{textAlign: "center", marginTop: "1.8rem"}}><p><span style={{fontWeight: "bold", color: "#16cdfa"}}>Note </span>: Make sure that there are only text files and size of the files in repository is less than <span style={{fontWeight: "bold"}}>3MB</span> before submitting.</p></div>}
       {loading &&
       <div style={{textAlign: "center", color:"#16cdfa", fontWeight: "bold"}}>
 
