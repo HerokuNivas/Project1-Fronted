@@ -54,7 +54,7 @@ function MainComponent() {
       setopenPopUp(false);
       setLoading(true);
       const apiCall =
-        "https://inverted-index-generator.herokuapp.com/?apikey=" +
+        "https://vsainivas.pythonanywhere.com/?apikey=" +
         apiKey +
         "&userName=" +
         userName +
