@@ -8,7 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 export default function SuccessAlert(props) {
     return (
       /* This is the stack which contains the success message code */
-      /* Why so serious*/
+      /* And what nexrt bro*/
       /* This is made by Nivas with single hand*/
       <Stack sx={{ width: '100%' }} spacing={2} style={{marginTop: "1.8rem"}}>
         <Alert severity="success">
