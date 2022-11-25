@@ -5,12 +5,17 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import ComponentBorder from "./ComponentBorder";
 import MainComponent from "./mainComponent";
+import Search from "./search";
 
 function HomeRoute(){
     return(
         <div>
             <Navbar/>
             <MainComponent/>
+            <div style={{marginTop: "3rem", marginBottom: "3rem"}}>
+                <ComponentBorder/>
+            </div>
+            <div id="search"><Search/></div>
             <div style={{marginTop: "3rem", marginBottom: "3rem"}}>
                 <ComponentBorder/>
             </div>

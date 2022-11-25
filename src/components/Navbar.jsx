@@ -4,6 +4,7 @@ import "../css/Navbar.css";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArticleIcon from '@mui/icons-material/Article';
 import EmailIcon from '@mui/icons-material/Email';
+import SearchIcon from '@mui/icons-material/Search';
 
 function Navbar(props) {
   return (
@@ -20,6 +21,9 @@ function Navbar(props) {
     <ul class="navbar-nav mr-auto listItems">
       <li class="nav-item active">
         <Link className="nav-link changeLink listItem" to="/documentation"><h6>Documentation <ArticleIcon fontSize="small" style={{color: "white"}}/></h6></Link>
+      </li>
+      <li class="nav-item">
+        <a className="nav-link changeLink listItem" href="#search"><h6>Search <SearchIcon fontSize="small" style={{color: "white"}}/></h6></a>
       </li>
       <li class="nav-item">
         <a className="nav-link changeLink listItem" href="#contact"><h6>Contact Us <EmailIcon fontSize="small" style={{color: "white"}}/></h6></a>

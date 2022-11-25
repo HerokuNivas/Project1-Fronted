@@ -1,0 +1,28 @@
+.searchPage{
+    margin-left: 35px;
+}
+
+
+h3.searchHeading{
+    color: #16cdfa;
+    margin-bottom: 1.8rem;
+    margin-left: 1%;
+}
+
+.searchPageLink{
+    display: inline-table;
+}
+
+.searchPageWord{
+    display: inline-table;
+}
+
+@media screen and (max-width: 992px){
+    .searchPageWord{
+        margin-top: 2rem;
+    }
+}
+
+.searchSubmitText{
+    color: white;
+}

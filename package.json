@@ -17,6 +17,7 @@
     "react": "^18.2.0",
     "react-back-to-top-button": "^0.0.14",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
     "react-loading": "^2.0.3",
     "react-router": "^6.4.2",
     "react-router-dom": "^6.4.2",
