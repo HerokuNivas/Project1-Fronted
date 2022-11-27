@@ -67,7 +67,7 @@ export default function Search() {
       return;
     } else {
       const apiCall =
-        "http://vsainivas.pythonanywhere.com/search/?link=" +
+        "https://vsainivas.pythonanywhere.com/search/?link=" +
         link +
         "&word=" +
         currentWord +
