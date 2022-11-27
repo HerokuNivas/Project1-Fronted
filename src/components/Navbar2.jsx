@@ -4,6 +4,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import KeyIcon from '@mui/icons-material/Key';
 import StorageIcon from '@mui/icons-material/Storage';
 import OutputIcon from '@mui/icons-material/Output';
+import SearchIcon from '@mui/icons-material/Search';
 
 function Navbar2(props) {
   return (
@@ -23,6 +24,9 @@ function Navbar2(props) {
       </li>
       <li class="nav-item">
         <a className="nav-link changeLink listItem" href="#repoDocumentation"><h6>Repository <StorageIcon fontSize="small" style={{color: "white"}}/></h6></a>
+      </li>
+      <li class="nav-item">
+        <a className="nav-link changeLink listItem" href="#searchDocumentation"><h6>Search <SearchIcon fontSize="small" style={{color: "white"}}/></h6></a>
       </li>
       <li class="nav-item">
         <a className="nav-link changeLink listItem" href="#outputDocumentation"><h6>Types of output <OutputIcon fontSize="small" style={{color: "white"}}/></h6></a>

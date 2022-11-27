@@ -1,0 +1,10 @@
+#searchItem:hover{
+    font-weight: bolder;
+    color: #16cdfa;
+    text-decoration: underline;
+}
+
+#searchItem{
+    font-weight: bolder;
+    color: #16cdfa;
+}

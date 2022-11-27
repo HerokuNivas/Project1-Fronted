@@ -9,6 +9,15 @@ h3.searchHeading{
     margin-left: 1%;
 }
 
+.spanText1{
+    color: #16cdfa;
+}
+
+.spanText1:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .searchPageLink{
     display: inline-table;
 }
@@ -21,6 +30,7 @@ h3.searchHeading{
     .searchPageWord{
         margin-top: 2rem;
     }
+    
 }
 
 .searchSubmitText{

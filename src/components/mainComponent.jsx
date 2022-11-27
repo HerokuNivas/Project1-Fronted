@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import "../css/mainComponent.css";
 import TextField from "@mui/material/TextField";
@@ -19,10 +19,14 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+import {useStateContext} from "../context/ContextProvider";
 import { Link } from "react-router-dom";
+import VersionReleases from "../Errorandsuccess/versionRelease";
+
 
 function MainComponent() {
+  const {setCurrentLink, setCurrentApiKey, setCurrentSuccessCode} = useStateContext();
+  const [open, setOpen] = useState(true);
   const [popup1, setpopup1] = useState(false);
   const [apiKey, setapiKey] = useState("");
   const [userName, setUserName] = useState("");
@@ -38,6 +42,7 @@ function MainComponent() {
   const [openPopUp, setopenPopUp] = useState(false);
   const [apiCallIs, setapiCall] = useState("");
   const [radioButton, setRadioButton] = useState("Index");
+  const [dontShow, setDontShow] = useState(true);
 
   async function submitFun() {
     if (
@@ -74,6 +79,9 @@ function MainComponent() {
           setSuccessCode(val.successCode);
           await setData(val.text);
           await setSuccessCode(val.successCode);
+          await setCurrentSuccessCode(val.successCode);
+          await setCurrentApiKey(apiKey);
+          await setCurrentLink('https://github.com/'+userName+'/'+repoName+'/blob/main/'+fileName+'.txt');
         
         setLoading(false);
         setopenPopUp(true);
@@ -84,7 +92,8 @@ function MainComponent() {
 
   return (
     <div className="mainComponent">
-      <h3 className="detailHeading">
+      {dontShow && <VersionReleases open={open} setOpen={setOpen} dontShow={dontShow} setDontShow={setDontShow}/>}
+      <h3 className="detailHeading" style={{marginTop: "25px"}}>
         Fill the details to generate inverted index file
       </h3>
       <div className="mainComponentAPIKey col-lg-6 col-md-12 col-sm-12">
@@ -217,6 +226,7 @@ function MainComponent() {
       {openPopUp && successCode && <SuccessAlert link={apiCallIs} popup={setopenPopUp}/>}
       {openPopUp && !successCode && <ErrorAlert1 text={dataIs} popup={setopenPopUp}/>}
       
+
     </div>
   );
 }

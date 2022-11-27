@@ -10,6 +10,7 @@ import OutputDocumentation from "../documentations/outputDocumentation";
 import Footer from "./Footer";
 import BackToTop from "react-back-to-top-button";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import SearchDocumentation from "../documentations/searchDocumentation";
 
 function Documentation(){
     return(
@@ -36,6 +37,12 @@ function Documentation(){
             </div>
             <div id="repoDocumentation">
                 <RepoDocumentation/>
+            </div>
+            <div style={{marginTop: "2.5rem"}}>
+                <ComponentBorder/>
+            </div>
+            <div id="searchDocumentation">
+                <SearchDocumentation/>
             </div>
             <div style={{marginTop: "2.5rem"}}>
                 <ComponentBorder/>
