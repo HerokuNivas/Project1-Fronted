@@ -7,7 +7,7 @@ function Homeroute(){
     const [transitionPage, setTransitionPage] = useState(true);
     setTimeout(function(){
         setTransitionPage(false);
-    }, 500)
+    }, 1000)
 
     if(transitionPage){
         return(
