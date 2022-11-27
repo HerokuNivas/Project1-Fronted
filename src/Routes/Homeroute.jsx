@@ -6,7 +6,6 @@ import HomeRoute from '../components/HomeRoute';
 function Homeroute(){
     const [transitionPage, setTransitionPage] = useState(true);
     setTimeout(function(){
-        window.location = "http://localhost:3000/home"
         setTransitionPage(false);
     }, 1000)
 
