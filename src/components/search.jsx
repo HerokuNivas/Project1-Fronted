@@ -283,7 +283,7 @@ export default function Search() {
                     </p>
                   </Grid>
                 ))}
-                <Grid><div style={{marginTop: "50px", marginLeft: "-50px"}}><Link to="/result"><span className="spanText1">more</span></Link></div></Grid>
+                <Grid><div style={{marginTop: "50px", marginLeft: "-50px"}}><Link to="/result"><span title="Click this to get complete output" className="spanText1">more</span></Link></div></Grid>
               </Grid>
             </div>}
           </div>

@@ -13,7 +13,7 @@ export default function SearchDocumenation(){
                 <p>3. Enter the GITHUB ApiKey of your account.</p>
                 <p><span style={{color: "red", fontWeight: "bold", marginLeft: "20px"}}>Note </span>: Here, you can use GITHUB ApiKey having only read access.</p>
                 <p>Instead of typing the details second time, if you generated the index file already then you can click the checkbox to use the same details here.</p>
-                <p>4. You can select the number of words which are matched to be displayed per page.</p>
+                <p>4. You can select the number of words to be displayed per page.</p>
                 <p style={{marginLeft:"20px"}}>If the more is clicked then you will be redirected to a page having all the matching results.</p>
             </div>
         </div>

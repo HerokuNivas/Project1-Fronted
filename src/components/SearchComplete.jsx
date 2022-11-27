@@ -7,7 +7,7 @@ export default function SearchComplete(){
     return(
         <div style={{margin: "25px", border: "2px solid #16cdfa", padding:"25px"}}>
             <div>
-                <h1>Output File</h1>
+                <h1>Output of all words</h1>
             </div>
             {Object.entries(currentObject.Final.Files).map(([key, value]) => (
             <SearchItem
