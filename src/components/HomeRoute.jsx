@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import ComponentBorder from "./ComponentBorder";
 import MainComponent from "./mainComponent";
 import Search from "./search";
+import image1 from "../images/diarymilk.png";
 
 
 function HomeRoute() {
@@ -26,8 +27,8 @@ function HomeRoute() {
         <Contact />
       </div>
       <div style={{textAlign: "right", marginRight: "20px"}}>
-        <a href="https://www.buymeacoffee.com/vsnsainivaS">
-          <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=vsnsainivaS&button_colour=16cdfa&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" />
+        <a href="https://buy.stripe.com/4gw7wogRVfMg6uA4gi">
+          <img src={image1} style={{borderRadius: "2%"}} />
         </a>
       </div>
       <Footer />
