@@ -26,7 +26,7 @@ function HomeRoute() {
       <div id="contact">
         <Contact />
       </div>
-      <div style={{textAlign: "right", marginRight: "20px"}}>
+      <div style={{textAlign: "right", marginRight: "20px", marginTop: "20px"}}>
         <a href="https://buy.stripe.com/4gw7wogRVfMg6uA4gi">
           <img src={image1} style={{borderRadius: "2%"}} />
         </a>

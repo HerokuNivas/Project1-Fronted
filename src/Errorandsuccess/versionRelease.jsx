@@ -8,7 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 export default function VersionReleases(props) {
 
-    const features = ["You can generate inverted index file 🤗🤗.", "You can get all the files in which word is present 😎😎.", "You can navigate to the file with one click containing the word 🥳🥳."]
+    const features = ["You can generate inverted index file 🤗🤗.", "You can get all the files in which word is present 😎😎.", "You can navigate to the file containing the word with one click🥳🥳."]
 
   return (
     <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
