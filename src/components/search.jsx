@@ -34,6 +34,7 @@ export default function Search() {
   const { currentApiKey, currentLink, currentSuccessCode, currentWord, setCurrentWord, currentObject, setCurrentObject } = useStateContext();
   const [checked, setChecked] = useState(false);
   const [itemIs, setItemIs] = useState(3);
+  const [currentSearchWord, setCurrentSearchWord] = useState("");
   const listIs = [3, 5, 10];
 
   function submitFunction() {
@@ -81,6 +82,7 @@ export default function Search() {
       if (val.Success === "Success") {
         setPopUp(false);
         setDoneSuccess("Success");
+        setCurrentSearchWord(currentWord);
       } else {
         setDoneSuccess("Failure");
         setPopUp(true);
@@ -228,7 +230,7 @@ export default function Search() {
         )}
 
         {success && doneSuccess === "Success"  && (
-          <div >
+          <div>
             {itemIs !== "more" && <div style={{marginBottom: "45px"}}>
               <CloseIcon
                 fontSize="medium"
@@ -239,7 +241,7 @@ export default function Search() {
                 <SearchItem
                   keyIs={key}
                   valueIs={value}
-                  wordIs={currentWord}
+                  wordIs={currentSearchWord}
                   objectIs={currentObject}
                 />
               ))}
@@ -254,7 +256,7 @@ export default function Search() {
                     marginLeft: "10px",
                   }}
                 >
-                  No documents found with that word{" "}
+                  No documents found with that word
                   <SentimentVeryDissatisfiedIcon />
                 </p>
               </div>
@@ -266,9 +268,9 @@ export default function Search() {
               }}
             >
               
-              <p style={{color: "#16cdfa", position:"relative", left: "38%", fontWeight: "bold"}}>Select the number of words to be displayed.</p>
+              <p style={{color: "#16cdfa", fontWeight: "bold", marginLeft: "36%"}}>Select the number of words to be displayed.</p>
               <div style={{marginTop: "20px"}}>
-              <div  style={{position: "relative", left: "45%"}} >
+              <div style={{marginLeft: "46%"}}>
               <Grid container spacing={2}>
                 {listIs.map((item) => (
                   <Grid item>

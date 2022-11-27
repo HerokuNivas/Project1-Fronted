@@ -11,8 +11,8 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 export default function SearchItem(props){
     const [many, setMany] = useState(4);
     const [more, showMore] = useState(true);
-    console.log(props.valueIs.length);
-    console.log(props.valueIs);
+    
+    
     return(
         <div style={{marginTop: "25px", marginLeft: "15px", marginRight: "15px"}}>
               <p><span style={{color: "black"}}>{props.keyIs.substring(0, props.keyIs.toLowerCase().indexOf(props.wordIs.toLowerCase()))}</span><span style={{color: "black", textDecoration: "underline", fontWeight: "bold"}}>{props.keyIs.substring(props.keyIs.toLowerCase().indexOf(props.wordIs.toLowerCase()), props.keyIs.toLowerCase().indexOf(props.wordIs.toLowerCase()) + props.wordIs.length)}</span><span style={{color: "black"}}>{props.keyIs.substring(props.keyIs.toLowerCase().indexOf(props.wordIs.toLowerCase()) + props.wordIs.length)}</span></p>
