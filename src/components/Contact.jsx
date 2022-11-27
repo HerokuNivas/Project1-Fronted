@@ -7,6 +7,7 @@ import Sendbutton from "./Sendbutton";
 import ErrorAlert from "../Errorandsuccess/error.tsx";
 import AbcIcon from '@mui/icons-material/Abc';
 import InputAdornment from '@mui/material/InputAdornment';
+import { useStateContext } from "../context/ContextProvider";
 
 const issues = [
   {
@@ -28,12 +29,10 @@ const issues = [
 ];
 
 function Contact() {
-  const [issue, setIssue] = useState("API Key Issue");
-  const [others, setOthers] = useState(false);
-  const [otherTitle, setOtherTitle] = useState("");
   const [errorIs, setError] = useState(false);
-  const [description, setDescription] = useState("");
   const [displayError, setdisplayError] = useState(false);
+
+  const {issue, setIssue, others, setOthers, otherTitle, setOtherTitle, description, setDescription} = useStateContext();
 
   
 
@@ -87,6 +86,7 @@ function Contact() {
             required
             id="outlined-required"
             label="Required"
+            value={otherTitle}
             onChange={function(e) {
               setOtherTitle(e.target.value);
               setdisplayError(false);
@@ -104,6 +104,7 @@ function Contact() {
         <TextField
           placeholder="Start typing here  .."
           label="Describe your issue here"
+          value={description}
           InputProps={{
           endAdornment: (
             <InputAdornment position="end">
@@ -114,7 +115,6 @@ function Contact() {
           multiline
           minRows={2}
           maxRows={10}
-          value={description}
           onChange={(e) => setDescription(e.target.value)}
           style={{ width: "300px" }}
         />

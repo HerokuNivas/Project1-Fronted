@@ -5,9 +5,13 @@ import BackToTop from "react-back-to-top-button";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function SearchComplete() {
-  const { currentObject, currentWord } = useStateContext();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  const { currentObject, currentWord, link, setLink, apiKey, setApiKey, setCurrentWord, setCurrentObject, setCurrentSearchWord, currentSearchWord, apiKey1, setapiKey, fileName, setfileName, repoName, setrepoName, userName, setUserName, radioButton, setRadioButton, issue, setIssue, otherTitle, setOtherTitle, description, setDescription, others, setOthers, setVerifyChange, setbackButton} = useStateContext();
   return (
     <div>
       <div>
@@ -26,7 +30,24 @@ export default function SearchComplete() {
         >
           <div className="arrowBackIconDoc">
             <Link to="/home">
-              <ArrowBackIcon
+              <ArrowBackIcon onClick={() => {
+                setLink(link)
+                setApiKey(apiKey)
+                setCurrentObject(currentObject)
+                setCurrentWord(currentWord) 
+                setCurrentSearchWord(currentSearchWord) 
+                setUserName(userName)
+                setfileName(fileName)
+                setrepoName(repoName)
+                setapiKey(apiKey1)
+                setRadioButton(radioButton)
+                setOthers(others)
+                setOtherTitle(otherTitle)
+                setIssue(issue)
+                setDescription(description)
+                setVerifyChange(false)
+                setbackButton(true)
+            }}
                 style={{
                   color: "#16cdfa",
                   marginTop: "10px",

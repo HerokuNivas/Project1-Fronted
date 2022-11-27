@@ -19,23 +19,22 @@ import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDiss
 import { Grid } from "@mui/material"; 
 import SearchComplete from "./SearchComplete";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Search() {
-  const [link, setLink] = useState("");
-  const [apiKey, setApiKey] = useState("");
+  
   const [loading, setLoading] = useState(false);
   const [linkError, setLinkError] = useState(false);
   const [apiError, setApiError] = useState(false);
   const [wordError, setWordError] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [doneSuccess, setDoneSuccess] = useState("");
   const [change, setChange] = useState(false);
   const [popup, setPopUp] = useState(true);
-  const { currentApiKey, currentLink, currentSuccessCode, currentWord, setCurrentWord, currentObject, setCurrentObject } = useStateContext();
+  const { currentApiKey, currentLink, currentSuccessCode, currentWord, setCurrentWord, currentObject, setCurrentObject, link, setLink, apiKey, setApiKey, success, setSuccess, doneSuccess, setDoneSuccess, currentSearchWord, setCurrentSearchWord, verifyChange, setVerifyChange, backButton, setbackButton } = useStateContext();
   const [checked, setChecked] = useState(false);
   const [itemIs, setItemIs] = useState(3);
-  const [currentSearchWord, setCurrentSearchWord] = useState("");
   const listIs = [3, 5, 10];
+
+  
 
   function submitFunction() {
     if (checked === false) {
@@ -49,6 +48,7 @@ export default function Search() {
 
   async function performSearch() {
     if (change === false && doneSuccess !== "Failure" && success) {
+      setVerifyChange(true);
       return;
     }
     setSuccess(false);
@@ -94,9 +94,17 @@ export default function Search() {
     }
     setLoading(false);
   }
+  useEffect(() => {
+    if(backButton)
+      window.scrollTo({top: 750, behavior: 'smooth'})
+    setbackButton(false)  
+  }, [])
+  console.log(backButton);
 
   return (
+    
     <div className="searchPage">
+      
       <h3 className="searchHeading">Search</h3>
       <div className="searchPageLink col-lg-6 col-md-12 col-sm-12">
         <h6>
@@ -108,10 +116,11 @@ export default function Search() {
           id="outlined-required"
           label="Required"
           value={link}
-          style={{ width: 400, marginTop: 10 }}
+          style={{ width: 300, marginTop: 10 }}
           onChange={(e) => {
             setLinkError(false);
             setLink(e.target.value);
+            setVerifyChange(false);
             setChange(true);
           }}
         />
@@ -127,10 +136,12 @@ export default function Search() {
           className="searchPageWordText"
           id="outlined-required"
           label="Required"
+          value={currentWord}
           style={{ width: 300, marginTop: 10 }}
           onChange={(e) => {
             setWordError(false);
             setCurrentWord(e.target.value);
+            setVerifyChange(false);
             setChange(true);
           }}
         />
@@ -154,6 +165,7 @@ export default function Search() {
           onChange={(e) => {
             setApiError(false);
             setApiKey(e.target.value);
+            setVerifyChange(false);
             setChange(true);
           }}
         />
@@ -168,6 +180,7 @@ export default function Search() {
             Check this box to use above details{" "}
             <Checkbox
               checked={checked}
+              value={checked}
               onChange={(e) => {
                 submitFunction();
                 setChecked(e.target.checked);
@@ -192,7 +205,12 @@ export default function Search() {
         >
           <span className="searchSubmitText">Search</span>
         </Button>
-
+          
+          {verifyChange && (
+              <div>
+                <p style={{marginTop: "20px", marginBottom:"20px", marginLeft: "10px", color:"red"}}>Change atleast one input value before submitting again.</p>
+              </div>
+            )}
         {loading && (
           <div
             style={{
@@ -225,7 +243,7 @@ export default function Search() {
         {success && popup && doneSuccess === "Failure" && (
           <ErrorAlert1
             popup={setPopUp}
-            text="Check the detils which you entered"
+            text="Check the detils which you entered. Also make sure that you haven't deleted any text file from repository after generating index file. If done so regenerate the index file."
           />
         )}
 

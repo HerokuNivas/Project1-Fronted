@@ -1,7 +1,5 @@
 import React from "react";
 import {Grid} from "@mui/material";
-import Paper from '@mui/material/Paper';
-import {styled} from "@mui/material";
 import { useState } from "react";
 import "../css/searchItem.css"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -12,7 +10,7 @@ export default function SearchItem(props){
     const [many, setMany] = useState(4);
     const [more, showMore] = useState(true);
     
-    
+
     return(
         <div style={{marginTop: "25px", marginLeft: "15px", marginRight: "15px"}}>
               <p><span style={{color: "black"}}>{props.keyIs.substring(0, props.keyIs.toLowerCase().indexOf(props.wordIs.toLowerCase()))}</span><span style={{color: "black", textDecoration: "underline", fontWeight: "bold"}}>{props.keyIs.substring(props.keyIs.toLowerCase().indexOf(props.wordIs.toLowerCase()), props.keyIs.toLowerCase().indexOf(props.wordIs.toLowerCase()) + props.wordIs.length)}</span><span style={{color: "black"}}>{props.keyIs.substring(props.keyIs.toLowerCase().indexOf(props.wordIs.toLowerCase()) + props.wordIs.length)}</span></p>

@@ -25,13 +25,9 @@ import VersionReleases from "../Errorandsuccess/versionRelease";
 
 
 function MainComponent() {
-  const {setCurrentLink, setCurrentApiKey, setCurrentSuccessCode} = useStateContext();
+  const {setCurrentLink, setCurrentApiKey, setCurrentSuccessCode, apiKey1, setapiKey, userName, setUserName, repoName, setrepoName, fileName, setfileName, radioButton, setRadioButton} = useStateContext();
   const [open, setOpen] = useState(true);
   const [popup1, setpopup1] = useState(false);
-  const [apiKey, setapiKey] = useState("");
-  const [userName, setUserName] = useState("");
-  const [repoName, setrepoName] = useState("");
-  const [fileName, setfileName] = useState("");
   const [apiError, setapiError] = useState(false);
   const [userError, setuserError] = useState(false);
   const [repoError, setrepoError] = useState(false);
@@ -41,17 +37,16 @@ function MainComponent() {
   const [successCode, setSuccessCode] = useState(false);
   const [openPopUp, setopenPopUp] = useState(false);
   const [apiCallIs, setapiCall] = useState("");
-  const [radioButton, setRadioButton] = useState("Index");
   const [dontShow, setDontShow] = useState(true);
 
   async function submitFun() {
     if (
-      apiKey === "" ||
+      apiKey1 === "" ||
       userName === "" ||
       repoName === "" ||
       fileName === ""
     ) {
-      if (apiKey === "") setapiError(true);
+      if (apiKey1 === "") setapiError(true);
       if (userName === "") setuserError(true);
       if (repoName === "") setrepoError(true);
       if (fileName === "") setfileError(true);
@@ -60,7 +55,7 @@ function MainComponent() {
       setLoading(true);
       const apiCall =
         "https://vsainivas.pythonanywhere.com/?apikey=" +
-        apiKey +
+        apiKey1 +
         "&userName=" +
         userName +
         "&repoName=" +
@@ -80,7 +75,7 @@ function MainComponent() {
           await setData(val.text);
           await setSuccessCode(val.successCode);
           await setCurrentSuccessCode(val.successCode);
-          await setCurrentApiKey(apiKey);
+          await setCurrentApiKey(apiKey1);
           await setCurrentLink('https://github.com/'+userName+'/'+repoName+'/blob/main/'+fileName+'.txt');
         
         setLoading(false);
@@ -103,6 +98,7 @@ function MainComponent() {
           className="apiGit"
           id="outlined-required"
           label="Required"
+          value={apiKey1}
           style={{ width: 300, marginTop: 10 }}
           onChange={(e) => {
             setapiError(false);
@@ -127,6 +123,7 @@ function MainComponent() {
           className="apiUserName"
           id="outlined-required"
           label="Required"
+          value={userName}
           style={{ width: 300, marginTop: 10 }}
           onChange={(e) => {
             setuserError(false);
@@ -148,6 +145,7 @@ function MainComponent() {
           required
           className="gitRepoName"
           id="outlined-required"
+          value={repoName}
           label="Required"
           style={{ width: 300, marginTop: 10 }}
           onChange={(e) => {
@@ -165,6 +163,7 @@ function MainComponent() {
         </h6>
         <TextField
           required
+          value={fileName}
           className="gitFileName"
           id="outlined-required"
           label="Required"
