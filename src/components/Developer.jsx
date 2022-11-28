@@ -21,6 +21,7 @@ export default function Developer() {
               marginTop: "30px",
               fontWeight: "bold",
             }}
+            className="lowdevices"
           >
             Valiveti Swamy Naga Sai Nivas
           </h3>
