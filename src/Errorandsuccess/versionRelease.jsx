@@ -11,11 +11,11 @@ export default function VersionReleases(props) {
     const features = ["You can generate inverted index file 🤗🤗.", "You can get all the files in which word is present 😎😎.", "You can navigate to the file containing the word with one click🥳🥳."]
 
   return (
-    <div onClick={()=>(props.setOpen(false))} style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+    <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
     <Stack sx={{ width: props.open===false?"300px":"180px" }} spacing={2} >
       <Alert severity="info">
         {props.open === false && <p style={{marginLeft: "200px"}}><CloseIcon onClick={()=>(props.setOpen(true))} style={{color: "red"}}/></p>}
-        <AlertTitle><span>What's New <QuestionMarkIcon color="#cce5ff" fontSize="small"/></span></AlertTitle>
+        <AlertTitle><span onClick={()=>(props.setOpen(false))}>What's New <QuestionMarkIcon color="#cce5ff" fontSize="small"/></span></AlertTitle>
             {props.open === false && features.map((item) => 
                 <p>{item}</p>
             )}
