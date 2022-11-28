@@ -252,7 +252,7 @@ export default function Search() {
           </div>
         )}
 
-        {!success && <div style={{textAlign: "center", marginTop: "1.8rem"}}><p><span style={{fontWeight: "bold", color: "#2699c7"}}>Note </span>: Make sure that the index file generated is recent (i.e., no changes are made to repository after generaing index file). Else you may end up with error or wrong results .</p></div>}
+        {!success && <div style={{textAlign: "center", marginTop: "1.8rem", marginRight: "20px"}}><p><span style={{fontWeight: "bold", color: "#2699c7"}}>Note </span>: Make sure that the index file generated is recent (i.e., no changes are made to repository after generaing index file). Else you may end up with error or wrong results .</p></div>}
 
         {success && popup && doneSuccess === "Failure" && (
           <ErrorAlert1

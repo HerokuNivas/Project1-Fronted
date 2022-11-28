@@ -30,6 +30,7 @@ export default function Developer() {
   const renderer = ({ seconds, completed }) => {
     if (completed) {
       setRedirect(false);
+      setUpdate("");
     } else {
       // Render a countdown
       return <span>{seconds}</span>;
@@ -229,7 +230,9 @@ export default function Developer() {
           </p>
 
           <p
-            onClick={() => setRedirect(false)}
+            onClick={() => {
+              setUpdate("")
+              setRedirect(false)}}
             style={{
               marginTop: "20px",
               color: "#2699c7",
@@ -254,7 +257,7 @@ export default function Developer() {
                 width: "100%",
               }}
             >
-              <div style={{ marginLeft: "45%" }}>
+              <div style={{ display:"flex", justifyContent: "center", alignItems: "center" }}>
                 <a
                   target="_blank"
                   href="https://www.instagram.com/__sai_nivas__/"
