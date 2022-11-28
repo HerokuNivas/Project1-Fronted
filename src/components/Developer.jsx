@@ -14,14 +14,12 @@ export default function Developer() {
   return (
     <div>
       <Slide direction="down" in={true} mountOnEnter unmountOnExit>
-      <div>
+      <div style={{textAlign: "center"}}>
           <h3
             style={{
               color: "#16cdfa",
               marginTop: "30px",
-              fontWeight: "bold",
-              marginLeft: "35%",
-              marginRight: "30%"
+              fontWeight: "bold"
             }}
           >
             Valiveti Swamy Naga Sai Nivas
@@ -92,7 +90,13 @@ export default function Developer() {
             </div>
           </div>
         </Slide>
+        <Slide direction="up" in={true} mountOnEnter unmountOnExit>
+          <div>
+
+          </div>
+        </Slide>
       </Center>
+      
     </div>
   );
 }
