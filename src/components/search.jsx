@@ -23,6 +23,8 @@ import { useEffect } from "react";
 import InputAdornment from '@mui/material/InputAdornment';
 import { VisibilityOff } from "@mui/icons-material";
 import { Visibility } from "@mui/icons-material";
+import Center from "react-center";
+
 
 export default function Search() {
   
@@ -300,9 +302,11 @@ export default function Search() {
               }}
             >
               
-              <p style={{color: "#2699c7", fontWeight: "bold", marginLeft: "36%"}}>Select the number of words to be displayed.</p>
+              <Center>
+              <div>
+              <p style={{color: "#2699c7", fontWeight: "bold"}}>Select the number of words to be displayed.</p>
               <div style={{marginTop: "20px"}}>
-              <div style={{marginLeft: "46%"}}>
+              <div style={{marginLeft: "120px"}}>
               <Grid container spacing={2}>
                 {listIs.map((item) => (
                   <Grid item>
@@ -320,7 +324,7 @@ export default function Search() {
                   </Grid>
                 ))}
                 <Grid><div style={{marginTop: "50px", marginLeft: "-50px"}}><Link to="/result"><span title="Click this to get complete output" className="spanText1">more</span></Link></div></Grid>
-              </Grid></div></div>
+              </Grid></div></div></div></Center>
             </div>}
           </div>
         )}
