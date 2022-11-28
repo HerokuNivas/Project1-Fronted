@@ -14,21 +14,25 @@ export default function Developer() {
   return (
     <div>
       <Center>
+        <div>
+          <h3
+            style={{
+              color: "#16cdfa",
+              marginTop: "30px",
+              fontWeight: "bold",
+            }}
+          >
+            Valiveti Swamy Naga Sai Nivas
+          </h3>
+        </div>
+      </Center>
+      <Center>
         <Slide direction="down" in={true} mountOnEnter unmountOnExit>
           <div>
-            <h3
-              style={{
-                color: "#16cdfa",
-                marginTop: "30px",
-                fontWeight: "bold",
-              }}
-            >
-              Valiveti Swamy Naga Sai Nivas
-            </h3>
             <div
               onMouseEnter={() => setImageClick(true)}
               onMouseLeave={() => setImageClick(false)}
-              style={{ marginLeft: "100px", marginTop: "30px" }}
+              style={{ marginTop: "30px" }}
             >
               <img
                 src={image1}
@@ -50,7 +54,8 @@ export default function Developer() {
             onMouseLeave={() => setLinkClick(false)}
             style={{
               color: "#16cdfa",
-              marginTop: "20px",
+              marginTop: "30px",
+              marginBottom: "20px",
               textDecoration: linkClick === true ? "underline" : "",
             }}
           >
@@ -69,14 +74,16 @@ export default function Developer() {
         <Slide direction="right" in={true} mountOnEnter unmountOnExit>
           <div>
             <div>
-              <p style={{marginLeft: "18px"}}>Have any idea? Suggest a feature.</p>
+              <p style={{ marginLeft: "18px" }}>
+                Have any idea? Suggest a feature.
+              </p>
 
               <TextField
                 id="outlined-multiline-static"
                 label="Suggest your feature here"
                 multiline
                 rows={2}
-                style={{width: 300}}
+                style={{ width: 300 }}
                 placeholder="Start typing"
               />
             </div>
