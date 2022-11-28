@@ -20,6 +20,9 @@ import { Grid } from "@mui/material";
 import SearchComplete from "./SearchComplete";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import InputAdornment from '@mui/material/InputAdornment';
+import { VisibilityOff } from "@mui/icons-material";
+import { Visibility } from "@mui/icons-material";
 
 export default function Search() {
   
@@ -33,6 +36,7 @@ export default function Search() {
   const [checked, setChecked] = useState(false);
   const [itemIs, setItemIs] = useState(3);
   const listIs = [3, 5, 10];
+  const [showApiKey, setShowApiKey] = useState(false);
 
   
 
@@ -99,7 +103,6 @@ export default function Search() {
       window.scrollTo({top: 750, behavior: 'smooth'})
     setbackButton(false)  
   }, [])
-  console.log(backButton);
 
   return (
     
@@ -162,12 +165,21 @@ export default function Search() {
           label="Required"
           value={apiKey}
           style={{ width: 300, marginTop: 10 }}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                {!showApiKey && <Visibility onClick={()=>setShowApiKey(true)} />}
+                {showApiKey && <VisibilityOff onClick={()=>setShowApiKey(false)}/>}
+              </InputAdornment>
+            ),
+          }}
           onChange={(e) => {
             setApiError(false);
             setApiKey(e.target.value);
             setVerifyChange(false);
             setChange(true);
           }}
+          type={showApiKey===true?"text":"password"}
         />
         {apiError && <ErrorAlert />}
       </div>
@@ -239,6 +251,8 @@ export default function Search() {
             Searching...
           </div>
         )}
+
+        {!success && <div style={{textAlign: "center", marginTop: "1.8rem"}}><p><span style={{fontWeight: "bold", color: "#16cdfa"}}>Note </span>: Make sure that the index file generated is recent (i.e., no changes are made to repository after generaing index file). Else you may end up with error or wrong results .</p></div>}
 
         {success && popup && doneSuccess === "Failure" && (
           <ErrorAlert1

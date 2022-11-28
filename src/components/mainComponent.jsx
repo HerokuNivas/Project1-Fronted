@@ -22,6 +22,9 @@ import FormControl from '@mui/material/FormControl';
 import {useStateContext} from "../context/ContextProvider";
 import { Link } from "react-router-dom";
 import VersionReleases from "../Errorandsuccess/versionRelease";
+import InputAdornment from '@mui/material/InputAdornment';
+import { VisibilityOff } from "@mui/icons-material";
+import { Visibility } from "@mui/icons-material";
 
 
 function MainComponent() {
@@ -38,6 +41,7 @@ function MainComponent() {
   const [openPopUp, setopenPopUp] = useState(false);
   const [apiCallIs, setapiCall] = useState("");
   const [dontShow, setDontShow] = useState(true);
+  const [showApiKey, setShowApiKey] = useState(false);
 
   async function submitFun() {
     if (
@@ -99,12 +103,21 @@ function MainComponent() {
           id="outlined-required"
           label="Required"
           value={apiKey1}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                {!showApiKey && <Visibility onClick={()=>setShowApiKey(true)} />}
+                {showApiKey && <VisibilityOff onClick={()=>setShowApiKey(false)}/>}
+              </InputAdornment>
+            ),
+          }}
           style={{ width: 300, marginTop: 10 }}
           onChange={(e) => {
             setapiError(false);
             setopenPopUp(false);
             setapiKey(e.target.value);
           }}
+          type={showApiKey===true?"text":"password"}
         />
         <div className="helpIcon">
           <HelpIcon

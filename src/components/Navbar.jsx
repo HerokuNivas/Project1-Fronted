@@ -5,8 +5,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArticleIcon from '@mui/icons-material/Article';
 import EmailIcon from '@mui/icons-material/Email';
 import SearchIcon from '@mui/icons-material/Search';
+import PersonIcon from '@mui/icons-material/Person';
 
-function Navbar(props) {
+function Navbar() {
+
   return (
     <nav class="navbar navbar-expand-lg navBar">
   <span class="navbar-brand" href="#"><h3 style={{marginLeft: 26}}>Inverted Index Generator</h3></span>
@@ -23,10 +25,13 @@ function Navbar(props) {
         <Link className="nav-link changeLink listItem" to="/documentation"><h6>Documentation <ArticleIcon fontSize="small" style={{color: "white"}}/></h6></Link>
       </li>
       <li class="nav-item">
-        <a className="nav-link changeLink listItem" href="#search"><h6>Search <SearchIcon fontSize="small" style={{color: "white"}}/></h6></a>
+        <a className="nav-link changeLink listItem" href="#search"><h6>Perform Search <SearchIcon fontSize="small" style={{color: "white"}}/></h6></a>
       </li>
       <li class="nav-item">
         <a className="nav-link changeLink listItem" href="#contact"><h6>Contact Us <EmailIcon fontSize="small" style={{color: "white"}}/></h6></a>
+      </li>
+      <li class="nav-item active">
+        <Link className="nav-link changeLink listItem" to="/developers"><h6>Developers <PersonIcon fontSize="small" style={{color: "white"}}/></h6></Link>
       </li>
     </ul>
   </div>

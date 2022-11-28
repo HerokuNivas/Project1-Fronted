@@ -25,7 +25,6 @@ export const ContextProvider = ({ children }) => {
   const [description, setDescription] = useState("");
   const [verifyChange, setVerifyChange] = useState(false);
   const [backButton, setbackButton] = useState(false);
-  const [email, userEmail] = useState("");
 
 
 
