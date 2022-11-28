@@ -13,20 +13,22 @@ export default function Developer() {
 
   return (
     <div>
-      <Center>
-        <div>
+      <Slide direction="down" in={true} mountOnEnter unmountOnExit>
+      <div>
           <h3
             style={{
               color: "#16cdfa",
               marginTop: "30px",
               fontWeight: "bold",
+              marginLeft: "35%",
+              marginRight: "30%"
             }}
-            className="lowdevices"
           >
             Valiveti Swamy Naga Sai Nivas
           </h3>
         </div>
-      </Center>
+      </Slide>
+      
       <Center>
         <Slide direction="down" in={true} mountOnEnter unmountOnExit>
           <div>

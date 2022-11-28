@@ -2,10 +2,3 @@
     display: block;
     margin: auto;
 }
-
-@media screen and (max-width: 300px){
-    .lowdevices{
-        margin-left: 30%;
-        margin-right: 30%
-    }
-}
