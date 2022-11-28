@@ -5,6 +5,7 @@ import Stack from "@mui/material/Stack";
 import { useState } from "react";
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import CloseIcon from '@mui/icons-material/Close';
+import "../css/alertTitleVersion.css"
 
 export default function VersionReleases(props) {
 
@@ -15,7 +16,7 @@ export default function VersionReleases(props) {
     <Stack sx={{ width: props.open===false?"300px":"180px" }} spacing={2} >
       <Alert severity="info">
         {props.open === false && <p style={{marginLeft: "200px"}}><CloseIcon onClick={()=>(props.setOpen(true))} style={{color: "red"}}/></p>}
-        <AlertTitle><span onClick={()=>(props.setOpen(false))}>What's New <QuestionMarkIcon color="#cce5ff" fontSize="small"/></span></AlertTitle>
+        <AlertTitle><span className="alertTitleVersion" onClick={()=>(props.setOpen(false))}>What's New <QuestionMarkIcon color="#cce5ff" fontSize="small"/></span></AlertTitle>
             {props.open === false && features.map((item) => 
                 <p>{item}</p>
             )}
