@@ -2,3 +2,27 @@
     display: block;
     margin: auto;
 }
+
+.instaaccount:hover{
+    color: white;
+}
+
+.linkedinaccount:hover{
+    color: white;
+}
+
+.githubaccount:hover{
+    color: white;
+}
+
+.instaaccount{
+    color: black;
+}
+
+.linkedinaccount{
+    color: black;
+}
+
+.githubaccount{
+    color: black;
+}

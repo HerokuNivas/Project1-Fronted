@@ -111,7 +111,7 @@ export default function Search() {
       <h3 className="searchHeading">Search</h3>
       <div className="searchPageLink col-lg-6 col-md-12 col-sm-12">
         <h6>
-          Link <LinkIcon style={{ color: "#16cdfa" }} />
+          Link <LinkIcon style={{ color: "#2699c7" }} />
         </h6>
         <TextField
           required
@@ -132,7 +132,7 @@ export default function Search() {
 
       <div className="searchPageWord col-lg-6 col-md-12 col-sm-12">
         <h6>
-          Word <TiSortAlphabetically size="25px" style={{ color: "#16cdfa" }} />
+          Word <TiSortAlphabetically size="25px" style={{ color: "#2699c7" }} />
         </h6>
         <TextField
           required
@@ -156,7 +156,7 @@ export default function Search() {
         className="searchPageAPI col-lg-6 col-md-12 col-sm-12"
       >
         <h6>
-          Api Key of GITHUB <KeyIcon style={{ color: "#16cdfa" }} size="25px" />
+          Api Key of GITHUB <KeyIcon style={{ color: "#2699c7" }} size="25px" />
         </h6>
         <TextField
           required
@@ -197,7 +197,7 @@ export default function Search() {
                 submitFunction();
                 setChecked(e.target.checked);
               }}
-              style={{ color: "#16cdfa" }}
+              style={{ color: "#2699c7" }}
             />
           </p>
         </div>
@@ -206,7 +206,7 @@ export default function Search() {
       <div style={{ marginTop: "10px" }}>
         <Button
           style={{
-            backgroundColor: "#16cdfa",
+            backgroundColor: "#2699c7",
             marginTop: "1.8rem",
             marginLeft: "1%",
           }}
@@ -227,7 +227,7 @@ export default function Search() {
           <div
             style={{
               textAlign: "center",
-              color: "#16cdfa",
+              color: "#2699c7",
               fontWeight: "bold",
             }}
           >
@@ -243,7 +243,7 @@ export default function Search() {
             >
               <ReactLoading
                 type="spin"
-                color="#16cdfa"
+                color="#2699c7"
                 height={30}
                 width={30}
               />
@@ -252,7 +252,7 @@ export default function Search() {
           </div>
         )}
 
-        {!success && <div style={{textAlign: "center", marginTop: "1.8rem"}}><p><span style={{fontWeight: "bold", color: "#16cdfa"}}>Note </span>: Make sure that the index file generated is recent (i.e., no changes are made to repository after generaing index file). Else you may end up with error or wrong results .</p></div>}
+        {!success && <div style={{textAlign: "center", marginTop: "1.8rem"}}><p><span style={{fontWeight: "bold", color: "#2699c7"}}>Note </span>: Make sure that the index file generated is recent (i.e., no changes are made to repository after generaing index file). Else you may end up with error or wrong results .</p></div>}
 
         {success && popup && doneSuccess === "Failure" && (
           <ErrorAlert1
@@ -300,7 +300,7 @@ export default function Search() {
               }}
             >
               
-              <p style={{color: "#16cdfa", fontWeight: "bold", marginLeft: "36%"}}>Select the number of words to be displayed.</p>
+              <p style={{color: "#2699c7", fontWeight: "bold", marginLeft: "36%"}}>Select the number of words to be displayed.</p>
               <div style={{marginTop: "20px"}}>
               <div style={{marginLeft: "46%"}}>
               <Grid container spacing={2}>

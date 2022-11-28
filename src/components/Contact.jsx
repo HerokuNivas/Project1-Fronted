@@ -108,7 +108,7 @@ function Contact() {
           InputProps={{
           endAdornment: (
             <InputAdornment position="end">
-              <AbcIcon fontSize="large" style={{color: "#16cdfa"}}/>
+              <AbcIcon fontSize="large" style={{color: "#2699c7"}}/>
             </InputAdornment>
           ),
         }}

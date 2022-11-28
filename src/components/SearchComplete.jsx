@@ -24,7 +24,7 @@ export default function SearchComplete() {
         <div
           style={{
             margin: "25px",
-            border: "2px solid #16cdfa",
+            border: "2px solid #2699c7",
             padding: "25px",
           }}
         >
@@ -49,7 +49,7 @@ export default function SearchComplete() {
                 setbackButton(true)
             }}
                 style={{
-                  color: "#16cdfa",
+                  color: "#2699c7",
                   marginTop: "10px",
                   marginLeft: "-10px",
                   marginBottom: "10px",

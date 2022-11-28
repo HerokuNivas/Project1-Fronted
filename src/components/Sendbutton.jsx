@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 function Sendbutton() {
   return (
     <div>
-      <Button style={{backgroundColor: "#16cdfa"}} type="submit" variant="contained" endIcon={<SendIcon style={{marginTop: 0}}/>}>
+      <Button style={{backgroundColor: "#2699c7"}} type="submit" variant="contained" endIcon={<SendIcon style={{marginTop: 0}}/>}>
         Send
       </Button>
     </div>

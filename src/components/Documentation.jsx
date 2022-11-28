@@ -24,7 +24,7 @@ function Documentation(){
       </BackToTop>
             <Navbar2/>
             <div className="arrowBackIconDoc">
-               <Link to="/home"><ArrowBackIcon style={{color: "#16cdfa", marginTop: "10px", marginLeft: "18px"}}/></Link>
+               <Link to="/home"><ArrowBackIcon style={{color: "#2699c7", marginTop: "10px", marginLeft: "18px"}}/></Link>
             </div>
             <div className="gettingStarted">
                 <h5 style={{color: "black"}}>To know what is Inverted Index click <a style={{color: "black"}} href="https://www.geeksforgeeks.org/inverted-index/" rel="noopener noreffer" target="_blank"><span className="firstLink" style={{fontWeight: "bold"}}>here</span></a> </h5>

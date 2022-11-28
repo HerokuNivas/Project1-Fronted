@@ -96,7 +96,7 @@ function MainComponent() {
         Fill the details to generate inverted index file
       </h3>
       <div className="mainComponentAPIKey col-lg-6 col-md-12 col-sm-12">
-        <h6>API key of GITHUB <KeyIcon style={{color: "#16cdfa"}}/></h6>
+        <h6>API key of GITHUB <KeyIcon style={{color: "#2699c7"}}/></h6>
         <TextField
           required
           className="apiGit"
@@ -123,14 +123,14 @@ function MainComponent() {
           <HelpIcon
             onClick={() => setpopup1(true)}
             titleAccess="Why API Key?"
-            style={{ marginLeft: 8, color: "#16cdfa"}}
+            style={{ marginLeft: 8, color: "#2699c7"}}
           />
         </div>
         {popup1 && <PopUp1 close={setpopup1} />}
         {apiError && <ErrorAlert />}
       </div>
       <div className="mainComponentUserName col-lg-6 col-md-12 col-sm-12">
-        <h6>Username of GITHUB <PersonIcon style={{color: "#16cdfa"}}/></h6>
+        <h6>Username of GITHUB <PersonIcon style={{color: "#2699c7"}}/></h6>
         <TextField
           required
           className="apiUserName"
@@ -152,7 +152,7 @@ function MainComponent() {
         style={{ marginTop: "2.5rem" }}
       >
         <h6>
-          GITHUB repository name <StorageIcon style={{ color: "#16cdfa" }} />
+          GITHUB repository name <StorageIcon style={{ color: "#2699c7" }} />
         </h6>
         <TextField
           required
@@ -172,7 +172,7 @@ function MainComponent() {
 
       <div className="mainComponentFileName col-lg-6 col-md-12 col-sm-12">
         <h6>
-          File Name <CreateIcon style={{ color: "#16cdfa" }} />
+          File Name <CreateIcon style={{ color: "#2699c7" }} />
         </h6>
         <TextField
           required
@@ -196,12 +196,12 @@ function MainComponent() {
       <div style={{marginLeft: "18px", marginTop: "1.8rem"}}>
       <p>Select the output type <Link to='/documentation/outputDocumentation'><HelpIcon
             
-            style={{ marginLeft: 8, color: "#16cdfa", display: "inline-block"}}
+            style={{ marginLeft: 8, color: "#2699c7", display: "inline-block"}}
       /></Link></p>
       <FormControl component="fieldset">
       <RadioGroup aria-label="output" name="output" defaultValue="Index" value={radioButton} onChange={(e)=>{setRadioButton(e.target.value)}} row>
-        <FormControlLabel value="Index" control={<Radio style={{color: "#16cdfa"}}/>} label="To use index of file" />
-        <FormControlLabel value="FileName" control={<Radio style={{color: "#16cdfa"}}/>} label="To use file name" />
+        <FormControlLabel value="Index" control={<Radio style={{color: "#2699c7"}}/>} label="To use index of file" />
+        <FormControlLabel value="FileName" control={<Radio style={{color: "#2699c7"}}/>} label="To use file name" />
       </RadioGroup>
     </FormControl>
       </div>
@@ -209,7 +209,7 @@ function MainComponent() {
       <div className="mainComponentSubmitButton">
         <Button
           style={{
-            backgroundColor: "#16cdfa",
+            backgroundColor: "#2699c7",
             marginTop: "1.8rem",
             marginLeft: "1%",
           }}
@@ -221,12 +221,12 @@ function MainComponent() {
           <span className="mainComponentSubmitText">Submit</span>
         </Button>
       </div>
-      {!loading && !openPopUp && <div style={{textAlign: "center", marginTop: "1.8rem"}}><p><span style={{fontWeight: "bold", color: "#16cdfa"}}>Note </span>: Make sure that there are only text files and size of the files in repository is less than <span style={{fontWeight: "bold"}}>3MB</span>.</p></div>}
+      {!loading && !openPopUp && <div style={{textAlign: "center", marginTop: "1.8rem"}}><p><span style={{fontWeight: "bold", color: "#2699c7"}}>Note </span>: Make sure that there are only text files and size of the files in repository is less than <span style={{fontWeight: "bold"}}>3MB</span>.</p></div>}
       {loading &&
-      <div style={{textAlign: "center", color:"#16cdfa", fontWeight: "bold"}}>
+      <div style={{textAlign: "center", color:"#2699c7", fontWeight: "bold"}}>
 
       <div style={{textAlign: "center", justifyItems: "center", marginLeft: "48%", marginTop: "20px", marginBottom:"10px", marginRight: "48%"}}>
-        <ReactLoading type="spin" color="#16cdfa" height={30} width={30}/>
+        <ReactLoading type="spin" color="#2699c7" height={30} width={30}/>
         
       </div>
 

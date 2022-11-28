@@ -7,7 +7,7 @@ export default function SearchDocumenation(){
     return(
         <div className="searchDoc">
            <div>
-                <h3 style={{color: "#16cdfa", marginBottom: "1.8rem"}}>Search Documenatation</h3>
+                <h3 style={{color: "#2699c7", marginBottom: "1.8rem"}}>Search Documenatation</h3>
             </div> 
             <div>
                 <p>1. You need to enter the link of the Inverted Index File.</p>

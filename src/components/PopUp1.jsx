@@ -50,7 +50,7 @@ function PopUp1(props) {
         contentStyle={{
           position: "absolute",
           marginLeft: ml,
-          background: "#16cdfa",
+          background: "#2699c7",
           marginTop: mt,
           marginRight: mr,
           textAlign: "left",
