@@ -21,7 +21,7 @@ export default function SearchDocumenation(){
                 <p style={{marginLeft: "20px"}}>To, see the complete list of documents you can click show more option.</p>
                 <p style={{marginLeft: "20px", marginTop: "20px"}}>Click show more to get all documents.</p>
                 <div><img src={image1} width={"80%"} height={"80%"}/></div>
-                <p style={{marginLeft: "20px", marginTop: "20px"}}>Click show less to get original.</p>
+                <p style={{marginLeft: "20px", marginTop: "20px"}}>Click show less to get original layout.</p>
                 <div><img src={image2} width={"80%"} height={"80%"}/></div>
             </div>
         </div>
