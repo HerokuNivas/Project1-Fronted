@@ -19,10 +19,6 @@ const issues = [
     label: "Documentation?",
   },
   {
-    value: "Suggestions",
-    label: "Any Suggestion?",
-  },
-  {
     value: "Others",
     label: "Others?",
   },
