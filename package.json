@@ -17,6 +17,7 @@
     "react": "^18.2.0",
     "react-back-to-top-button": "^0.0.14",
     "react-center": "^1.1.1",
+    "react-confirm-alert": "^3.0.6",
     "react-countdown": "^2.3.5",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
