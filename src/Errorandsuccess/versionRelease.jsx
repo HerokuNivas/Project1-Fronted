@@ -9,7 +9,7 @@ import "../css/alertTitleVersion.css"
 
 export default function VersionReleases(props) {
 
-    const features = ["You can generate inverted index file 🤗🤗.", "You can get all the files in which word is present 😎😎.", "You can navigate to the file containing the word with one click🥳🥳."]
+    const features = ["You can generate inverted index file 🤗🤗.", "You can get all the files in which word is present 😎😎.", "You can navigate to the file containing the word with one click🥳🥳.", "Hurrah! Now we can track the already generated inverted index files in your repository 😃😃."]
 
   return (
     <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>

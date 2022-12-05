@@ -17,6 +17,8 @@ import Countdown from "react-countdown";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Link } from "react-router-dom";
 
 export default function Developer() {
   const [imageClick, setImageClick] = useState(false);
@@ -58,6 +60,17 @@ export default function Developer() {
 
   return (
     <div>
+      <Link to="/home">
+        <ArrowBackIcon
+          onClick={() => {}}
+          style={{
+            color: "#2699c7",
+            marginTop: "10px",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        />
+      </Link>
       {loading !== true && redirect !== true && (
         <div>
           <Slide direction="down" in={true} mountOnEnter unmountOnExit>
@@ -231,8 +244,9 @@ export default function Developer() {
 
           <p
             onClick={() => {
-              setUpdate("")
-              setRedirect(false)}}
+              setUpdate("");
+              setRedirect(false);
+            }}
             style={{
               marginTop: "20px",
               color: "#2699c7",
@@ -257,7 +271,13 @@ export default function Developer() {
                 width: "100%",
               }}
             >
-              <div style={{ display:"flex", justifyContent: "center", alignItems: "center" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <a
                   target="_blank"
                   href="https://www.instagram.com/__sai_nivas__/"
@@ -267,7 +287,10 @@ export default function Developer() {
                   </span>
                 </a>
 
-                <a target="_blank" href="https://www.linkedin.com/in/swamy-naga-sai-nivas-valiveti-7a7474201/">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/swamy-naga-sai-nivas-valiveti-7a7474201/"
+                >
                   <span style={{ marginRight: "25px" }}>
                     <LinkedInIcon className="linkedinaccount" />
                   </span>
@@ -276,7 +299,6 @@ export default function Developer() {
                 <a target="_blank" href="https://github.com/VSNSAINIVAS">
                   <GitHubIcon className="githubaccount" />
                 </a>
-
               </div>
             </div>
           </Slide>
