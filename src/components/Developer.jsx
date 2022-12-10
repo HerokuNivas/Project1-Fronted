@@ -62,7 +62,7 @@ export default function Developer() {
   return (
     <div>
       <div style={{position: "absolute"}}>
-      {!loading && <Link to="/home">
+      {!loading && !redirect && <Link to="/home">
         <ArrowBackIcon
           onClick={() => {}}
           style={{
