@@ -45,14 +45,15 @@ export default function Developer() {
       return;
     } else {
       setLoading(true);
-      const apiCall =
-        "https://inverted-index-database.vercel.app/?update=" + update;
-      const data = await axios({
-        method: "GET",
-        url: apiCall,
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ "update": update })
+    };
+      await fetch('https://inverted-index-database.vercel.app/', requestOptions).then((response) => response.json())
+      .then((responseData) => {
+        setSuccess(responseData.status);
       });
-      const val = await data.data;
-      setSuccess(val.status);
       setLoading(false);
       setRedirect(true);
     }
@@ -60,17 +61,19 @@ export default function Developer() {
 
   return (
     <div>
-      <Link to="/home">
+      <div style={{position: "absolute"}}>
+      {!loading && <Link to="/home">
         <ArrowBackIcon
           onClick={() => {}}
           style={{
             color: "#2699c7",
-            marginTop: "10px",
             marginLeft: "20px",
-            marginBottom: "10px",
+            postion: "absolute",
           }}
         />
-      </Link>
+      </Link>}
+      </div>
+      
       {loading !== true && redirect !== true && (
         <div>
           <Slide direction="down" in={true} mountOnEnter unmountOnExit>
@@ -164,7 +167,7 @@ export default function Developer() {
 
           <Center>
             <Slide direction="up" in={true} mountOnEnter unmountOnExit>
-              <div style={{ display: "block", marginTop: "25px" }}>
+              <div style={{ display: "block", marginTop: "25px"}}>
                 <Button
                   variant="contained"
                   size="medium"
