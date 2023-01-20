@@ -127,7 +127,7 @@ function MainComponent() {
             repoName +
             "/blob/main/" +
             fileName +
-            ".txt"
+            "-InvertedIndex.txt"
         );
         setopenPopUp(true);
       }
