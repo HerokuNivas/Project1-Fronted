@@ -61,7 +61,7 @@ export default function ConfirmationAlert(props) {
         props.repoName +
         "/blob/main/" +
         props.fileName +
-        ".txt"
+        "-InvertedIndex.txt"
     );
     props.setopenPopUp(true);
     props.setLoading(false);
